@@ -4,27 +4,26 @@
 :root {
   --radius: 0.625rem;
 
-  /* מצב Light → נראה כהה */
   --background: #0a0a0a;
-  --foreground: #ededed;
+  --foreground: #f4f4f5;
 
   --card: #0a0a0a;
-  --card-foreground: #ededed;
+  --card-foreground: #f4f4f5;
 
   --popover: #0a0a0a;
-  --popover-foreground: #ededed;
+  --popover-foreground: #f4f4f5;
 
-  --primary: #ededed;
+  --primary: #f4f4f5;
   --primary-foreground: #0a0a0a;
 
   --secondary: #1a1a1a;
-  --secondary-foreground: #ededed;
+  --secondary-foreground: #f4f4f5;
 
   --muted: #1a1a1a;
   --muted-foreground: #999999;
 
   --accent: #1a1a1a;
-  --accent-foreground: #ededed;
+  --accent-foreground: #f4f4f5;
 
   --destructive: #ff5555;
 
@@ -33,11 +32,11 @@
   --ring: #555555;
 
   --sidebar: #0a0a0a;
-  --sidebar-foreground: #ededed;
-  --sidebar-primary: #ededed;
+  --sidebar-foreground: #f4f4f5;
+  --sidebar-primary: #f4f4f5;
   --sidebar-primary-foreground: #0a0a0a;
   --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #ededed;
+  --sidebar-accent-foreground: #f4f4f5;
   --sidebar-border: #2a2a2a;
   --sidebar-ring: #555555;
 
@@ -133,6 +132,25 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+}
+
+@theme {
+--animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+}
+
+@layer components {
+  .main-gradient{
+    @apply bg-gradient-to-r from-[#011627] via-[#1E4E8C] to-[#3178C6]
+  }
 }
 
 @layer base {
