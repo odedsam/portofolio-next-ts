@@ -5,13 +5,15 @@ type SwitchBtnProps = {
   children: React.ReactNode | React.ReactSVGElement;
   onClick?: (event: any) => void;
   isDark?: boolean; // Add isDark prop to control icon position
+  className?: string;
 };
 
-export default function SwitchButton({ children, onClick, isDark }: SwitchBtnProps) {
+export default function SwitchButton({ children, onClick, isDark, className }: SwitchBtnProps) {
   return (
     <button
       onClick={onClick}
       className={cn(
+        className,
         'inline-flex h-[1.15rem] w-8 shrink-0 items-center rounded-full shadow-xs transition-all outline-none disabled:opacity-50 relative border-2',
       )}
     >
