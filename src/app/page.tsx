@@ -2,7 +2,7 @@ import HomeSection from '@/components/sections/HomeSection';
 
 export default function Home() {
   return (
-    <div className="-full">
+    <div className="w-full">
       <HomeSection />
     </div>
   );

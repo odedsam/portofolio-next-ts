@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
         <AppHeader />
-         <main className="container"> {children}</main>
+         <main className="w-full"> {children}</main>
         </ThemeProvider>
       </body>
     </html>

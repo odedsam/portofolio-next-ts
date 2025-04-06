@@ -6,8 +6,8 @@ export default function AppHeader() {
   return (
     <div className="flex items-center justify-between py-4">
       <h1 className="text-xl font-bold">Oded Samuel</h1>
+      <div className="flex justify-center items-center gap-4">
       <ThemeToggle />
-      <div>
       <FaGithub size={30} />
       </div>
     </div>
