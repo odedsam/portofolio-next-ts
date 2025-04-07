@@ -5,7 +5,7 @@ export default function ProjectCard(project: ProjectProps) {
     <div className="bg-gray-200 bg-opacity-20 backdrop-blur-lg overflow-hidden rounded-xl shadow-xl border border-white border-opacity-30 hover:scale-105 transition">
       <div className="p-4 border border-gray-700 rounded-lg">
         <IconLabel icon={project.image} text={project.name} />
-        <h3 className="text-2xl font-semibold text-gray-gray-500">{project.name}</h3>ƒ
+        <h3 className="text-2xl font-semibold text-gray-500">{project.name}</h3>
         <p className="text-gray-500">{project.description}</p>
         <div className="mt-4">
           <iframe

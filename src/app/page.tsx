@@ -5,7 +5,7 @@ import ProjectSection from '@/app/components/sections/home/ProjectSection';
 import {PROJECTS,SKILLS} from "@/app/constants/index"
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full main-gradient">
       <HomeSection />
       <SkillsSection skills={SKILLS} />
       <ProjectSection project={PROJECTS} />

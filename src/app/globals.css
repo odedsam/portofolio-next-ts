@@ -150,7 +150,10 @@
 @layer components {
   .main-gradient{
     @apply bg-gradient-to-r from-[#011627] via-[#1E4E8C] to-[#3178C6];
+  }
 
+  .dark .main-gradient {
+    @apply bg-gradient-to-r from-[#0a0a0a] via-[#1a1a1a] to-[#2a2a2a];
   }
 }
 
