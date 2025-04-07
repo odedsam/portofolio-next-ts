@@ -1,9 +1,15 @@
-import Image from "next/image";
-export default function SkillsSection() {
+import SkillCard from "../../features/cards/SkillCard";
+import { IconLabelProps } from "@/app/types";
+type SkillProps = {
+  skills: IconLabelProps[];
+};
+export default function SkillsSection({ skills }: SkillProps) {
   return (
     <div className="py-16 px6">
       <h2 className="text-4xl font-semibold font-sans mb-6 text-center text-white drop-shadow-lg">Skills</h2>
-
+      <div className="grid cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        {Array.isArray(skills) && skills.map((sk, idx) => <SkillCard key={idx} icon={sk.icon} text={sk.text} />)}
+      </div>
     </div>
   );
 }
