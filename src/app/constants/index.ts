@@ -120,7 +120,7 @@ export const PROJECTS: ProjectProps[] = [
     name: "Hasa Media",
     image: "/hasa-media-logo.png",
     description: "Media services agency website with CMS-managed content and service showcase.",
-    demo: "https://https://hasamedia.io",
+    demo: "https://hasamedia.io",
     repo: "https://github.com/yourusername/media-agency",
   },
 ];
