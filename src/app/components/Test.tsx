@@ -1,7 +1,7 @@
 // test.js
 'use client';
 import { useTheme } from 'next-themes';
-import { ThemeProvider,  } from '../components/providers/ThemeProvider';
+import { ThemeProvider,  } from './providers/ThemeProvider';
 import { useEffect, useState } from 'react';
 
 function Test() {

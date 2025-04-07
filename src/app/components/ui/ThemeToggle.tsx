@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "next-themes";
-import { Card, CardContent } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
+import { Card, CardContent } from "@/app/components/ui/card";
+import { Label } from "@/app/components/ui/label";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import SwitchButton from "./SwitchButton";
