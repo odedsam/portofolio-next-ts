@@ -7,11 +7,29 @@ export default function ProjectCard(project: ProjectProps) {
         <IconLabel icon={project.image} text={project.name} />
         <h3 className="text-2xl font-semibold text-gray-100">{project.name}</h3>ƒ
         <p className="text-sm text-gray-300">{project.description}</p>
-        <div className="flex space-x-2 mt-2">
-          <a href={project.demo} className="text-pink-300 hover:text-indigo-400 transition">
+        <div className="mt-4">
+          <iframe
+            src={project.demo}
+            className="w-full h-[300px] rounded-md border border-gray-700"
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div className="flex space-x-2 mt-4">
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-300 hover:text-indigo-400 transition"
+          >
             Live Demo
           </a>
-          <a href={project.repo} className="text-pink-300 hover:text-indigo-400 transition">
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-pink-300 hover:text-indigo-400 transition"
+          >
             GitHub
           </a>
         </div>

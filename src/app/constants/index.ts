@@ -92,14 +92,14 @@ export const PROJECTS: ProjectProps[] = [
     name: "Estatein RealEstate",
     image: "/estatein-logo.svg",
     description: "High-end real estate website with property listings, filters, and booking system.",
-    demo: "https://yourportfolio.com",
+    demo: "https://estate-app-nuxt3.vercel.app",
     repo: "https://github.com/yourusername/portfolio",
   },
   {
     name: "Candleaf E‑Commerce",
     image: "/candleaf-logo.svg",
     description: "Minimalist online store built with Next.js, TailwindCSS, and Stripe integration.",
-    demo: "https://yourstore.com",
+    demo: "https://candleaf-front.vercel.app",
     repo: "https://github.com/yourusername/ecommerce-store",
   },
   {
