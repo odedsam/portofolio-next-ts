@@ -106,8 +106,16 @@ export const PROJECTS: ProjectProps[] = [
     name: "Avion E‑Commerce",
     image: ReactIcon,
     description: "Scalable e‑commerce app with CMS integration, shopping cart, and responsive UI.",
-    demo: "https://yourstore2.com",
+    demo: "https://avion-steel.vercel.app/",
     repo: "https://github.com/yourusername/avion-store",
+  },
+
+  {
+    name: "Hasa Media",
+    image:ReactIcon,
+    description: "Media services agency website with CMS-managed content and service showcase.",
+    demo: "https://hasamedia.io",
+    repo: "https://github.com/yourusername/media-agency",
   },
   {
     name: "Synapso CRM",
@@ -115,12 +123,5 @@ export const PROJECTS: ProjectProps[] = [
     description: "Custom CRM system with headless CMS, analytics, and role-based access control.",
     demo: "https://yoursaasapp.com",
     repo: "https://github.com/yourusername/crm-system",
-  },
-  {
-    name: "Hasa Media",
-    image:ReactIcon,
-    description: "Media services agency website with CMS-managed content and service showcase.",
-    demo: "https://hasamedia.io",
-    repo: "https://github.com/yourusername/media-agency",
   },
 ];
