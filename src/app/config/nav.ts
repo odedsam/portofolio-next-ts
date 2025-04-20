@@ -10,7 +10,7 @@ export const navLinks = [
 ];
 
 export const socials = [
-  { href: 'https://github.com', icon: FaGithub },
-  { href: 'https://linkedin.com', icon: FaLinkedin },
-  { href: 'mailto:oded@example.com', icon: FaEnvelope },
+  { href: 'https://github.com/fragged-up', icon: FaGithub },
+  { href: 'https://linkedin.com/in/oded-shmuel-18484a338/', icon: FaLinkedin },
+  { href: 'mailto:oded970@gmail.com', icon: FaEnvelope },
 ];

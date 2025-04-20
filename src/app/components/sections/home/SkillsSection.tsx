@@ -1,5 +1,5 @@
-import SkillCard from "../../features/cards/SkillCard";
-import { IconLabelProps } from "@/app/types";
+import SkillCard from '../../cards/SkillCard';
+import { IconLabelProps } from '@/app/types';
 type SkillProps = {
   skills: IconLabelProps[];
 };
