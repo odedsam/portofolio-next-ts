@@ -1,8 +1,9 @@
 // test.js
-'use client';
-import { useTheme } from 'next-themes';
-import { ThemeProvider,  } from './providers/ThemeProvider';
-import { useEffect, useState } from 'react';
+"use client";
+import { useTheme } from "next-themes";
+import { ThemeProvider } from "./providers/ThemeProvider";
+import { useEffect, useState } from "react";
+import { Icon } from "lucide-react";
 
 function Test() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -14,8 +15,8 @@ function Test() {
 
   return (
     <div>
-      <button onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>Toggle Theme</button>
-      <div className="bg-background text-foreground p-4">Test Text</div>
+      <button onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>Toggle Theme</button>
+
     </div>
   );
 }

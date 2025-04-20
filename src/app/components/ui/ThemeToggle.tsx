@@ -17,7 +17,7 @@ export function ThemeToggle() {
 
   return (
         <SwitchButton onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")} isDark={isDark}>
-          {isDark ? <Sun className="h-4 w-4 text-black" /> : <Moon className="h-4 w-4 text-white" />}
+          {isDark ? <Sun className="h-4 w-4 text-white" /> : <Moon className="h-4 w-4 text-black" />}
         </SwitchButton>
   );
 }

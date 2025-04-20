@@ -4,6 +4,50 @@
 :root {
   --radius: 0.625rem;
 
+  --background: #f4f4f5;
+  --foreground: #0a0a0a;
+
+  --card: #f4f4f5;
+  --card-foreground: #0a0a0a;
+
+  --popover: #f4f4f5;
+  --popover-foreground: #0a0a0a;
+
+  --primary: #0a0a0a;
+  --primary-foreground: #f4f4f5;
+
+  --secondary: #e5e5e5;
+  --secondary-foreground: #0a0a0a;
+
+  --muted: #e5e5e5;
+  --muted-foreground: #444444;
+
+  --accent: #e5e5e5;
+  --accent-foreground: #0a0a0a;
+
+  --destructive: #e63946;
+
+  --border: #d4d4d8;
+  --input: #d4d4d8;
+  --ring: #c4c4cc;
+
+  --sidebar: #f4f4f5;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #0a0a0a;
+  --sidebar-primary-foreground: #f4f4f5;
+  --sidebar-accent: #e5e5e5;
+  --sidebar-accent-foreground: #0a0a0a;
+  --sidebar-border: #d4d4d8;
+  --sidebar-ring: #c4c4cc;
+
+  --chart-1: #ff9f1c;
+  --chart-2: #2ec4b6;
+  --chart-3: #3a86ff;
+  --chart-4: #ffbe0b;
+  --chart-5: #fb5607;
+}
+
+.dark {
   --background: #0a0a0a;
   --foreground: #f4f4f5;
 
@@ -40,51 +84,6 @@
   --sidebar-border: #2a2a2a;
   --sidebar-ring: #555555;
 
-  --chart-1: #ff9f1c;
-  --chart-2: #2ec4b6;
-  --chart-3: #3a86ff;
-  --chart-4: #ffbe0b;
-  --chart-5: #fb5607;
-}
-
-.dark {
-  /* מצב Dark → נראה בהיר */
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-
-  --card: #ffffff;
-  --card-foreground: #0a0a0a;
-
-  --popover: #ffffff;
-  --popover-foreground: #0a0a0a;
-
-  --primary: #0a0a0a;
-  --primary-foreground: #ffffff;
-
-  --secondary: #f4f4f5;
-  --secondary-foreground: #0a0a0a;
-
-  --muted: #f4f4f5;
-  --muted-foreground: #444444;
-
-  --accent: #f4f4f5;
-  --accent-foreground: #0a0a0a;
-
-  --destructive: #e63946;
-
-  --border: #e5e5e5;
-  --input: #e5e5e5;
-  --ring: #cccccc;
-
-  --sidebar: #ffffff;
-  --sidebar-foreground: #0a0a0a;
-  --sidebar-primary: #0a0a0a;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f4f4f5;
-  --sidebar-accent-foreground: #0a0a0a;
-  --sidebar-border: #e5e5e5;
-  --sidebar-ring: #cccccc;
-
   --chart-1: #8338ec;
   --chart-2: #3a86ff;
   --chart-3: #ff006e;
@@ -92,7 +91,7 @@
   --chart-5: #ffbe0b;
 }
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
 
 @theme inline {
   --color-background: var(--background);
@@ -152,9 +151,7 @@
     @apply bg-gradient-to-r from-[#011627] via-[#1E4E8C] to-[#3178C6];
   }
 
-  .dark .main-gradient {
-    @apply bg-gradient-to-r from-[#0a0a0a] via-[#1a1a1a] to-[#2a2a2a];
-  }
+
 }
 
 @layer base {
