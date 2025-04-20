@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
-import React from "react";
+import { cn } from '@/lib/utils';
+import React from 'react';
 
 type SwitchBtnProps = {
   children: React.ReactNode | React.ReactSVGElement;
@@ -12,8 +12,15 @@ export default function SwitchButton({ children, onClick, isDark, className }: S
   return (
     <button
       onClick={onClick}
-      className={cn(className, "inline-flex h-[2.15rem] w-16 shrink-0 items-center rounded-full shadow-xs transition-all outline-none disabled:opacity-50 relative border-2")}>
-      <div className={cn("absolute transition-transform duration-200 ease-in-out",isDark? "translate-x-2 scale-100" : "translate-x-8 scale-110")}>
+      className={cn(
+        className,
+        'inline-flex h-[2.15rem] w-16 shrink-0 items-center rounded-full shadow-xs transition-all outline-none disabled:opacity-50 relative border-2',
+      )}>
+      <div
+        className={cn(
+          'absolute transition-transform duration-200 ease-in-out',
+          isDark ? 'translate-x-2 scale-100' : 'translate-x-8 scale-110',
+        )}>
         {children}
       </div>
     </button>
