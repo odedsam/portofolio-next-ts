@@ -3,7 +3,7 @@ import React from 'react';
 
 type SwitchBtnProps = {
   children: React.ReactNode | React.ReactSVGElement;
-  onClick?: (event: any) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   isDark?: boolean;
   className?: string;
 };

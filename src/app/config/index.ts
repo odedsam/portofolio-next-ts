@@ -1,4 +1,4 @@
-import type { IconLabelProps, ProjectProps } from '@/app/types';
+import type { IconLabelProps } from '@/app/types';
 import {
   CSSIcon,
   FireBaseIcon,

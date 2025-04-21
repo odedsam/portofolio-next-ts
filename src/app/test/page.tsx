@@ -1,14 +1,12 @@
-import { Icon } from "lucide-react";
+import { Icon } from 'lucide-react';
 
 export default function Test() {
   return (
     <div className="container">
-      {" "}
+      {' '}
       <section className="text-center py-24">
         <h1 className="text-4xl font-bold">I build clean, scalable web apps.</h1>
-        <p className="text-muted-foreground mt-4 text-lg">
-          Full-Stack Developer specializing in modern TypeScript frameworks.
-        </p>
+        <p className="text-muted-foreground mt-4 text-lg">Full-Stack Developer specializing in modern TypeScript frameworks.</p>
         <div className="mt-6 flex justify-center gap-4">
           <a href="/projects" className="btn btn-primary">
             View Projects
@@ -21,8 +19,8 @@ export default function Test() {
       <section className="text-center py-16 max-w-2xl mx-auto">
         <h2 className="text-2xl font-semibold">Reliable. Performant. Maintainable.</h2>
         <p className="text-muted-foreground mt-2">
-          I craft web applications that are fast, secure, and built to scale – with a strong focus on developer
-          experience and modern architecture.
+          I craft web applications that are fast, secure, and built to scale – with a strong focus on developer experience and modern
+          architecture.
         </p>
       </section>
       <section className="py-16">
@@ -39,8 +37,8 @@ export default function Test() {
         <section className="py-16 max-w-2xl mx-auto text-center">
           <h2 className="text-xl font-semibold">A Bit About Me</h2>
           <p className="text-muted-foreground mt-2">
-            I'm Oded, a passionate full-stack developer with 2 years of experience. I focus on clean code, modern
-            architecture, and delivering real business value through fast, functional web apps.
+            I&apos;m Oded, a passionate full-stack developer with 2 years of experience. I focus on clean code, modern architecture, and
+            delivering real business value through fast, functional web apps.
           </p>
           <a href="/about" className="text-primary underline mt-3 inline-block">
             Learn more →

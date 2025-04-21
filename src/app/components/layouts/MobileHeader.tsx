@@ -1,7 +1,6 @@
 'use client';
-import { BookOpen, FolderKanban, Mail, Code } from 'lucide-react';
+import { BookOpen, FolderKanban, Mail } from 'lucide-react';
 import { Menu, Home } from 'lucide-react';
-import { FaGithub } from 'react-icons/fa';
 import { Button } from '@/app/components/ui/button';
 import { SideBar } from '../ui/SideBar';
 import { useState } from 'react';
