@@ -10,7 +10,9 @@ type SwitchBtnProps = {
 
 export default function SwitchButton({ children, onClick, isDark, className }: SwitchBtnProps) {
   return (
-    <button onClick={onClick} className={cn(className, 'cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-500 rounded-full p-2')}>
+    <button
+      onClick={onClick}
+      className={cn(className, 'cursor-pointer rounded-full p-2 transition-colors', isDark ? 'hover:bg-gray-700' : 'hover:bg-gray-200')}>
       {children}
     </button>
   );

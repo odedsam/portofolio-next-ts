@@ -11,7 +11,7 @@ export default function ContactPage() {
       </p>
 
       <div className="space-y-4">
-        <Link href="mailto:oded.samuel.dev@gmail.com" className="flex items-center gap-2 text-primary hover:underline">
+        <Link href="mailto:oded970@gmail.com" className="flex items-center gap-2 text-primary hover:underline">
           <Mail className="w-5 h-5" />
           oded970@gmail.com
         </Link>
