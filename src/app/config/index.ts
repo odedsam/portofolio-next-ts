@@ -71,7 +71,7 @@ export const PROJECTS: Project[] = [
     title: 'Crypto Pulse',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
-    href: 'crypto-dash-flame.vercel.app',
+    href: 'https://crypto-dash-flame.vercel.app',
     github: 'https://github.com/fragged-up/crypto-dash',
   },
   {
