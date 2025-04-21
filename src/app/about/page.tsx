@@ -4,21 +4,18 @@ export default function page() {
       <section className="max-w-3xl mx-auto py-24 space-y-10">
         <div className="text-center">
           <h1 className="text-4xl font-bold">About Me</h1>
-          <p className="text-muted-foreground mt-2 text-lg">
-            Full-Stack Developer | TypeScript Expert | Problem-Solver
-          </p>
+          <p className="text-muted-foreground mt-2 text-lg">Full-Stack Developer | TypeScript Expert | Problem-Solver</p>
         </div>
 
         <div className="space-y-4 text-base leading-relaxed">
           <p>
-            I’m Oded, a dedicated full-stack developer with over 2 years of hands-on experience in building fast,
-            scalable, and maintainable web apps. I work exclusively with modern technologies like{" "}
-            <strong>TypeScript</strong>, <strong>Vue 3 / Nuxt 3</strong>, <strong>Next.js</strong>, and{" "}
-            <strong>NestJS</strong>.
+            I’m Oded, a dedicated full-stack developer with over 2 years of hands-on experience in building fast, scalable, and maintainable
+            web apps. I work exclusively with modern technologies like <strong>TypeScript</strong>, <strong>Vue 3 / Nuxt 3</strong>,{' '}
+            <strong>Next.js</strong>, and <strong>NestJS</strong>.
           </p>
           <p>
-            My approach is simple: I write clean, efficient code with a strong emphasis on architecture, performance,
-            and user experience. I value reliability, consistency, and getting things done – fast and right.
+            My approach is simple: I write clean, efficient code with a strong emphasis on architecture, performance, and user experience. I
+            value reliability, consistency, and getting things done – fast and right.
           </p>
         </div>
 

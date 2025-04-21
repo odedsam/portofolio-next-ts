@@ -1,12 +1,10 @@
-'use client';
-import NavLinks from '../navigation/NavLinks';
-import SocialLinks from '../navigation/SocialLinks';
+import MobileHeader from './MobileHeader';
+import DesktopHeader from './DesktopHeader';
 
 export default function AppHeader() {
   return (
-    <div className="flex items-center justify-between py-4 px-12">
-      <NavLinks />
-      <SocialLinks />
+    <div className="hidden lg:block">
+      <DesktopHeader />
     </div>
   );
 }

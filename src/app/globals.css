@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
 :root {
   --radius: 0.625rem;
 
@@ -150,7 +152,6 @@
   .main-gradient{
     @apply bg-gradient-to-r from-[#011627] via-[#1E4E8C] to-[#3178C6];
   }
-
 
 }
 
