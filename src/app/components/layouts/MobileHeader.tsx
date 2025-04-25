@@ -1,10 +1,11 @@
 'use client';
-import { BookOpen, FolderKanban, Mail } from 'lucide-react';
+import { ArrowLeft, BookOpen, FolderKanban, Mail } from 'lucide-react';
 import { Menu, Home } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import { SideBar } from '../ui/SideBar';
 import { useState } from 'react';
 import Link from 'next/link';
+import { ThemeToggle } from '../ui/ThemeToggle';
 
 export default function MobileHeader() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -13,12 +14,17 @@ export default function MobileHeader() {
     <>
       <header className="flex items-center justify-between px-4 py-3 shadow-sm bg-white dark:bg-black lg:hidden">
         <Button variant="ghost" size="icon" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-          <Menu className="w-5 h-5" />
+          <Menu className="w-5 h-5 cursor-pointer" />
         </Button>
       </header>
 
       <SideBar isOpen={isSidebarOpen}>
         <div className="flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <ArrowLeft onClick={() => setIsSidebarOpen(false)} className="cursor-pointer" />
+            <ThemeToggle />
+          </div>
+
           <Link
             href="/"
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}

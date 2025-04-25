@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Pin } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -8,6 +8,7 @@ export type Project = {
   tech: string[];
   href: string;
   github: string;
+  pinned?: boolean;
 };
 
 type Props = {
@@ -18,7 +19,10 @@ export default function ProjectCard({ projects }: Props) {
   return (
     <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
-        <div key={project.title} className="rounded-2xl border bg-background p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-md transition">
+        <div
+          key={project.title}
+          className="relative rounded-2xl border bg-background p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-md transition">
+          {project.pinned && <Pin className="absolute top-3 right-3 text-yellow-500 fill-yellow-500 w-5 h-5" />}
           <h2 className="text-lg sm:text-xl font-semibold mb-2">{project.title}</h2>
           <p className="text-sm sm:text-base text-muted-foreground mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
