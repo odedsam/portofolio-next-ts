@@ -13,7 +13,7 @@ export default function MobileHeader() {
   return (
     <>
       <header className="flex items-center justify-between px-4 py-3 shadow-sm bg-white dark:bg-black lg:hidden">
-        <Button variant="ghost" size="icon" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+        <Button variant="ghost" size="icon" className="cursor-pointer" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
           <Menu className="w-5 h-5 cursor-pointer" />
         </Button>
       </header>
