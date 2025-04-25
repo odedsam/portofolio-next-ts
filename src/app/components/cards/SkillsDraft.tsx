@@ -50,7 +50,6 @@ const DATABASE = [
   { icon: FireBaseIcon, text: 'FireBase' },
 ];
 
-// Handle styles dynamically using JavaScript
 const handleStyle = (title: string) => {
   if (title === 'Frontend' || title === 'State Management' || title === 'Backend' || title === 'Database & Auth') {
     return { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' };
@@ -72,7 +71,7 @@ const renderSection = (title: string, items: { icon: string; text: string }[]) =
   </div>
 );
 
-export default function SkillsSection() {
+export default function SkillsDraft() {
   return (
     <section className="py-10 space-y-12">
       <h2 className="text-2xl sm:text-3xl font-bold text-center">Skills</h2>
