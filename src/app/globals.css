@@ -1,10 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
   --radius: 0.625rem;
+
+  --font-sans: var(--ibm-plex-mono);
+  --font-fira: var(--fira-code);
 
   --background: #f4f4f5;
   --foreground: #0a0a0a;
@@ -47,6 +49,11 @@
   --chart-3: #3a86ff;
   --chart-4: #ffbe0b;
   --chart-5: #fb5607;
+}
+
+
+body {
+  font-family: var(--font-sans), sans-serif;
 }
 
 .dark {
@@ -154,6 +161,9 @@
   }
 
 }
+
+
+
 
 @layer base {
   * {

@@ -62,8 +62,8 @@ const renderSection = (title: string, items: { icon: string; text: string }[]) =
     <h3 className="text-center text-base sm:text-lg font-semibold mb-4">{title}</h3>
     <div className="grid gap-4 justify-items-center justify-center items-center" style={handleStyle(title)}>
       {items.map(({ icon, text }) => (
-        <div key={text} className="flex flex-col text-center items-center justify-center mx-auto hover:scale-105 transition">
-          <Image src={icon} alt={text} width={48} height={48} className="w-10 h-10 sm:w-12 sm:h-12 mb-1" />
+        <div key={text} className="flex flex-col text-center items-center justify-center mx-auto hover:scale-105 cursor-pointer transition">
+          <Image src={icon} alt={text} width={48} height={48} className="w-10 h-10 sm:w-12 cursor-pointer sm:h-12 mb-1" />
           <span className="text-xs sm:text-sm font-sans text-center">{text}</span>
         </div>
       ))}
