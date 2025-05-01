@@ -1,12 +1,9 @@
-'use client';
-import { PROJECTS } from '../config';
-import ProjectCard from '../components/cards/ProjectCard';
+import ProjectSection from '../components/sections/ProjectSection';
 
 export default function ProjectsPage() {
   return (
-    <section className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Projects</h1>
-      <ProjectCard projects={PROJECTS} />
-    </section>
+    <main className='py-12 lg:mt-12 h-screen'>
+       <ProjectSection />
+    </main>
   );
 }

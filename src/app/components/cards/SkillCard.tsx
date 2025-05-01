@@ -52,19 +52,19 @@ const DATABASE = [
 
 const handleStyle = (title: string) => {
   if (title === 'Frontend' || title === 'State Management' || title === 'Backend' || title === 'Database & Auth') {
-    return { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem' };
+    return { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' };
   }
   return {};
 };
 
 const renderSection = (title: string, items: { icon: string; text: string }[]) => (
   <div className="w-full">
-    <h3 className="text-center text-base sm:text-lg font-semibold mb-4">{title}</h3>
-    <div className="grid gap-4 justify-items-center justify-center items-center" style={handleStyle(title)}>
+    <h3 className="text-center font-bold mb-16 font-fira text-[min(7vw,36px)] drop-shadow-sm text-white text-shadow-sm dark:text-gray-500 backdrop:backdrop-contrast-200 mt-16">{title}</h3>
+    <div className="grid gap-4 justify-items-center justify-center items-center p-3" style={handleStyle(title)}>
       {items.map(({ icon, text }) => (
-        <div key={text} className="flex flex-col text-center items-center justify-center mx-auto hover:scale-105 cursor-pointer transition">
+        <div key={text} className="flex flex-col text-center items-center justify-center mx-auto gap-4 hover:scale-120 cursor-pointer transition-all">
           <Image src={icon} alt={text} width={48} height={48} className="w-10 h-10 sm:w-12 cursor-pointer sm:h-12 mb-1" />
-          <span className="text-xs sm:text-sm font-sans text-center">{text}</span>
+          <span className="text-xs sm:text-sm font-sans font-semibold text-center drop-shadow-lg">{text}</span>
         </div>
       ))}
     </div>
@@ -74,9 +74,9 @@ const renderSection = (title: string, items: { icon: string; text: string }[]) =
 const SkillCard = () => (
   <section className="py-10 space-y-12">
     {renderSection('Frontend', FRONTEND)}
+    {renderSection('Database & Auth', DATABASE)}
     {renderSection('State Management', STATE_MANAGEMENT)}
     {renderSection('Backend', BACKEND)}
-    {renderSection('Database & Auth', DATABASE)}
   </section>
 );
 
@@ -85,7 +85,7 @@ const SkillCard = () => (
 export default function SkillSection() {
   return (
     <div>
-      <h2 className="text-3xl font-bold mb-6 drop-shadow-2xl font-fira text-center transition-all duration-500 ease-in-out hover:text-neon-blue hover:scale-105 hover:drop-shadow-[0_0_15px_#00F]">
+      <h2 className="text-[min(13vw,46px)] font-semibold mb-6 drop-shadow-2xl font-sans text-center transition-all duration-100 ease-in-out hover:text-neon-gray hover:scale-120 hover:drop-shadow-gray-900 dark:hover:drop-shadow-gray-50">
         Skills
       </h2>
       <SkillCard />

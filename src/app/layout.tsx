@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="enableSystem" enableSystem disableTransitionOnChange>
           <AppHeader />
           <MobileHeader />
-          <main className="w-full">{children}</main>
+          <main className="w-full -z-40">{children}</main>
         </ThemeProvider>
       </body>
     </html>
