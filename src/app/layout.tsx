@@ -31,7 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${ibmPlexMono.variable} ${firaCode.variable} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="enableSystem" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AppHeader />
           <MobileHeader />
           <main className="w-full -z-40">{children}</main>
