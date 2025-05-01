@@ -2,7 +2,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function HeroLinks() {
   return (
-      <div className="flex space-x-4 mt-16 md:mt-12 cursor-pointer">
+      <div className="flex space-x-4 mt-12 cursor-pointer">
         <a href="https://github.com" target="_blank" rel="noopener noreferrer">
           <FaGithub size={45} className="text-neon-blue hover:text-neon-pink transition" />
         </a>
