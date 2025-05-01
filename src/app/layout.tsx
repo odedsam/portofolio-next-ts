@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Fira_Code,IBM_Plex_Mono } from 'next/font/google';
+import { Fira_Code,IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './components/providers/ThemeProvider';
 import AppHeader from '@/app/components/layouts/AppHeader';
