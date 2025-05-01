@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section className="w-full mt-48 sm:mt-56 mb-24 sm:mb-24 flex flex-col gap-2 items-center justify-center text-center space-y-4 md:space-y-14 px-6 dark:main-gradient">
       <div className="flex flex-col items-center max-w-full">
         <h2 className="font-sans text-[min(12vw,56px)] font-extrabold text-neon-blue text-white drop-shadow-lg md:drop-shadow-xl md:backdrop:backdrop-contrast-100 text-center">
-          Full-Stack Developer
+          Full-Stack Developer &#x7B;&#x7D;
         </h2>
       </div>
       <div className="flex flex-col items-center max-w-5xl md:max-w-full">
