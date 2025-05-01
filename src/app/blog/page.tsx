@@ -1,7 +1,7 @@
 import Link from 'next/link';
 export default function BlogPage() {
   return (
-   <main className='py-12 lg:mt-12 h-screen'>
+   <main className='py-24 lg:mt-12 h-screen -z-40'>
       <section className="max-w-2xl mx-auto p-6">
         <h1 className="text-3xl font-bold mb-4">Blog</h1>
         <p className="text-muted-foreground mb-6">Coming soon: technical articles, tutorials, and personal insights.</p>
