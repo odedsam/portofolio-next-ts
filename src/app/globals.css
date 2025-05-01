@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@custom-variant dark (&:is(.dark *));
+
 
 :root {
   --radius: 0.625rem;
@@ -51,9 +51,11 @@
   --chart-5: #fb5607;
 }
 
+@custom-variant dark (&:is(.dark *));
 
 body {
   font-family: var(--font-sans), sans-serif;
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
 }
 
 .dark {
@@ -100,7 +102,9 @@ body {
   --chart-5: #ffbe0b;
 }
 
-/* @custom-variant dark (&:is(.dark *)); */
+.liga {
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -143,6 +147,9 @@ body {
 }
 
 @theme {
+ --font-sans:var(--ibm-plex-mono),sans-serif;
+ --font-fira: var(--fira-code),sans-serif;
+
 --animate-wiggle: wiggle 1s ease-in-out infinite;
   @keyframes wiggle {
     0%,
@@ -170,6 +177,7 @@ body {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply font-sans bg-background text-foreground;
   }
 }
+

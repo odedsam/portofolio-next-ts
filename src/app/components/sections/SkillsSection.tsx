@@ -1,4 +1,4 @@
-import SkillCard from '../../cards/SkillCard';
+import SkillCard from '../cards/SkillsDraft';
 import { IconLabelProps } from '@/app/types';
 type SkillProps = {
   skills: IconLabelProps[];
