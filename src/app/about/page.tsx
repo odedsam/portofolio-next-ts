@@ -1,6 +1,6 @@
 export default function page() {
   return (
-    <main className="py-12 lg:mt-12 h-screen -z-40">
+    <main className="py-24 lg:mt-12 h-screen -z-40">
       <section className="max-w-3xl mx-auto py-12 md:py-24 px-6 space-y-10">
         <div className="flex flex-col justify-center items-center gap-4">
           <h1 className="text-4xl font-bold font-sans text-white drop-shadow-lg">About Me</h1>

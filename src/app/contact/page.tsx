@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function ContactPage() {
   return (
-    <main className="py-12 lg:mt-12 h-screen">
+    <main className="py-24 lg:mt-12 h-screen">
       <section className="max-w-2xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Contact</h1>
         <p className="text-muted-foreground mb-6">
