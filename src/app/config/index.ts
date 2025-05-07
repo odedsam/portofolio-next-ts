@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Estatein RealEstate',
     description: 'High-end real estate website with property listings, filters, and booking system.',
-    tech: ['TypeScript', 'Nuxt 3', 'Vue 3', 'Tailwind', 'FirebaseDB'],
+    tech: ['TypeScript', 'Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'FirebaseDB'],
     href: 'https://estate-app-nuxt3.vercel.app',
     github: 'https://github.com/fragged-up/Estate-App-nuxt3',
     pinned: true,
@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Candleaf E‑Commerce',
     description: 'Minimalist online store built with Next.js, TailwindCSS, and Stripe integration.',
-    tech: ['TypeScript', 'Vue 3', 'NodeJs', 'Tailwind', 'Stripe'],
+    tech: ['TypeScript', 'Vue 3', 'NodeJs','MongoDB','GoogleAuth', 'Tailwind', 'Stripe','Express'],
     href: 'https://candleaf-front.vercel.app',
     github: 'https://github.com/fragged-up/candleaf-front',
     pinned: true,
