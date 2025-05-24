@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+
+/aribtrage
+
 # next.js
 /.next/
 /out/

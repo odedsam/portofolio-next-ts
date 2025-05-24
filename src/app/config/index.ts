@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
     description: 'High-end real estate website with property listings, filters, and booking system.',
     tech: ['TypeScript', 'Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'FirebaseDB'],
     href: 'https://estate-app-nuxt3.vercel.app',
-    github: 'https://github.com/fragged-up/Estate-App-nuxt3',
+    githubMonorepo: 'https://github.com/fragged-up/Estate-App-nuxt3',
     pinned: true,
   },
   {
@@ -52,7 +52,8 @@ export const PROJECTS: Project[] = [
     description: 'Scalable e‑commerce app with CMS integration, shopping cart, and responsive UI.',
     tech: ['TypeScript', 'React', 'Tailwind', 'NestJS', 'ReduxRTK', 'MongoDB'],
     href: 'https://avion-steel.vercel.app/',
-    github: 'https://github.com/fragged-up/avion-new-react-18',
+    githubClientUrl: 'https://github.com/fragged-up/avion-new-react-18',
+    githubServerUrl:'https://github.com/fragged-up/avm-back',
     pinned: true,
   },
   {
@@ -60,7 +61,8 @@ export const PROJECTS: Project[] = [
     description: 'Minimalist online store built with Next.js, TailwindCSS, and Stripe integration.',
     tech: ['TypeScript', 'Vue 3', 'NodeJs','MongoDB','GoogleAuth', 'Tailwind', 'Stripe','Express'],
     href: 'https://candleaf-front.vercel.app',
-    github: 'https://github.com/fragged-up/candleaf-front',
+    githubClientUrl: 'https://github.com/fragged-up/candleaf-front',
+    githubServerUrl:'https://github.com/fragged-up/candleaf-back',
     pinned: true,
   },
 
@@ -69,7 +71,8 @@ export const PROJECTS: Project[] = [
     description: 'Media services agency website with CMS-managed content and service showcase.',
     tech: ['TypeScript', 'React', 'CMS', 'Responsive Design'],
     href: 'https://hasamedia.io',
-    github: 'https://github.com/fragged-up/Hasamedia',
+    githubClientUrl: 'https://github.com/fragged-up/Hasamedia',
+    githubMonorepo:'https://github.com/fragged-up/Hasamedia',
     pinned: true,
   },
   {
@@ -77,7 +80,7 @@ export const PROJECTS: Project[] = [
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://crypto-dash-flame.vercel.app',
-    github: 'https://github.com/fragged-up/crypto-dash',
+    githubMonorepo: 'https://github.com/fragged-up/crypto-dash',
   },
   // {
   //   title: 'Synapso CRM',
