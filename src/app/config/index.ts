@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'Hasa Media',
     description: 'Media services agency website with CMS-managed content and service showcase.',
-    tech: ['TypeScript', 'React', 'CMS', 'Responsive Design'],
+    tech: ['TypeScript', 'React', 'CMS', 'PHP'],
     href: 'https://hasamedia.io',
     githubClientUrl: 'https://github.com/fragged-up/Hasamedia',
     githubMonorepo:'https://github.com/fragged-up/Hasamedia',
