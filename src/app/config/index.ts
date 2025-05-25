@@ -82,25 +82,5 @@ export const PROJECTS: Project[] = [
     href: 'https://crypto-dash-flame.vercel.app',
     githubMonorepo: 'https://github.com/fragged-up/crypto-dash',
   },
-  // {
-  //   title: 'Synapso CRM',
-  //   description: 'Custom CRM system with headless CMS, analytics, and role-based access control.',
-  //   tech: ['Next.js', 'Headless CMS', 'RBAC', 'Charts'],
-  //   href: 'https://yoursaasapp.com',
-  //   github: 'https://github.com/yourusername/crm-system',
-  // },
-  // {
-  //   title: 'AI Prompts Playground',
-  //   description: 'Organize, test and manage your AI prompts with dynamic form generation and OpenAI integration.',
-  //   href: 'https://ai-prompts-playground.vercel.app',
-  //   github: 'https://github.com/oded-samuel/ai-prompts-playground',
-  //   tech: ['Next.js', 'Tailwind', 'Zod', 'OpenAI', 'Supabase'],
-  // },
-  // {
-  //   title: 'Finance Dashboard',
-  //   description: 'Track your income and expenses with real-time charts, Supabase auth and persistent transactions.',
-  //   href: 'https://finance-dashboard.vercel.app',
-  //   github: 'https://github.com/oded-samuel/finance-dashboard',
-  //   tech: ['Next.js', 'Tailwind', 'Zustand', 'Recharts', 'Supabase'],
-  // },
+
 ];
