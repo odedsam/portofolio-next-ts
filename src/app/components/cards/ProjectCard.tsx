@@ -12,35 +12,37 @@ export type Project = {
   githubServerUrl?: string;
   pinned?: boolean;
 };
+
 type GithubLinksType = {
-  clientUrl: string;
-  serverUrl: string;
-  monorepo: boolean;
+  clientUrl?: string;
+  serverUrl?: string;
+  monorepoUrl?: string;
 };
 
 type Props = {
   projects: Project[];
 };
 
+export const GithubLinks = ({ clientUrl, serverUrl, monorepoUrl }: GithubLinksType) => {
+  if (monorepoUrl) {
+    return (
+      <Link href={monorepoUrl} target="_blank" className="flex items-center gap-1">
+        Repo <FaGithub className="w-4 h-4" />
+      </Link>
+    );
+  }
 
-export const GithubLinks = ({ clientUrl, serverUrl, monorepo }: GithubLinksType) => {
   return (
     <div className="flex gap-2 items-center">
-      {monorepo ? (
+      {clientUrl && (
         <Link href={clientUrl} target="_blank" className="flex items-center gap-1">
-          Repo <FaGithub className="w-4 h-4" />
+          Client <FaGithub className="w-4 h-4" />
         </Link>
-      ) : (
-        <>
-          <Link href={clientUrl} target="_blank" className="flex items-center gap-1">
-            Client <FaGithub className="w-4 h-4" />
-          </Link>
-          {serverUrl && (
-            <Link href={serverUrl} target="_blank" className="flex items-center gap-1">
-              Server <FaGithub className="w-4 h-4" />
-            </Link>
-          )}
-        </>
+      )}
+      {serverUrl && (
+        <Link href={serverUrl} target="_blank" className="flex items-center gap-1">
+          Server <FaGithub className="w-4 h-4" />
+        </Link>
       )}
     </div>
   );
@@ -68,9 +70,9 @@ export default function ProjectCard({ projects }: Props) {
               Live <ExternalLink className="w-4 h-4" />
             </Link>
             <GithubLinks
-              clientUrl={project?.githubClientUrl ?? ''}
-              serverUrl={project.githubServerUrl ?? ''}
-              monorepo={!!project.githubMonorepo }
+              clientUrl={project.githubClientUrl}
+              serverUrl={project.githubServerUrl}
+              monorepoUrl={project.githubMonorepo}
             />
           </div>
         </div>
