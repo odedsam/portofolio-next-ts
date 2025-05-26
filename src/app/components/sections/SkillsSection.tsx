@@ -1,15 +1,12 @@
-import SkillCard from '../cards/SkillsDraft';
-import { IconLabelProps } from '@/app/types';
-type SkillProps = {
-  skills: IconLabelProps[];
-};
-export default function SkillsSection({ skills }: SkillProps) {
+import SkillCard from '../cards/SkillCard';
+
+export default function SkillSection() {
   return (
-    <div className="py-16 px-6 mx-16">
-      <h2 className="text-[min(13vw,46px)] font-semibold font-sans mb-6 text-center text-white drop-shadow-lg">Skills</h2>
-      <div className="grid cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {Array.isArray(skills) && skills.map((sk, idx) => <SkillCard key={idx} icon={sk.icon} text={sk.text} />)}
-      </div>
+    <div>
+      <h2 className="text-[min(13vw,46px)] font-semibold mb-24 drop-shadow-2xl font-sans text-center transition-all duration-100 ease-in-out hover:text-neon-gray hover:scale-120 hover:drop-shadow-gray-900 dark:hover:drop-shadow-gray-50">
+        Skills
+      </h2>
+      <SkillCard />
     </div>
   );
 }

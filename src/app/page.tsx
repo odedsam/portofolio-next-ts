@@ -1,7 +1,7 @@
 import HomeSection from '@/app/components/sections/HomeSection';
 import ContactSection from '@/app/components/sections/ContactSection';
-import SkillSection from './components/cards/SkillCard';
 import ProjectSection from './components/sections/ProjectSection';
+import SkillSection from './components/sections/SkillsSection';
 
 export default function Home() {
   return (

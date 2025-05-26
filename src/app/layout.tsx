@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Fira_Code,IBM_Plex_Mono } from 'next/font/google';
+import { Fira_Code,IBM_Plex_Mono, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './components/providers/ThemeProvider';
 import AppHeader from '@/app/components/layouts/AppHeader';
@@ -18,6 +18,12 @@ const firaCode = Fira_Code({
   subsets: ['latin'],
   display: 'swap',
 });
+const jetBrainsMono = JetBrains_Mono({
+  variable: '--font-jetbrains',
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Oded Samuel Portfolio',
@@ -30,7 +36,7 @@ type RootLayoutProps = Readonly<{
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${ibmPlexMono.variable} ${firaCode.variable} antialiased`}>
+      <body className={`${ibmPlexMono.variable} ${firaCode.variable} ${jetBrainsMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AppHeader />
           <MobileHeader />
