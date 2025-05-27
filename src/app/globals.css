@@ -1,12 +1,12 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 :root {
   --radius: 0.625rem;
 
   --font-sans: var(--ibm-plex-mono);
   --font-fira: var(--fira-code);
-  --font-jetbrains:var(--jetbrains);
+  --font-jetbrains: var(--jetbrains);
 
   --background: #f4f4f5;
   --foreground: #0a0a0a;
@@ -147,11 +147,10 @@ body {
 }
 
 @theme {
- --font-sans:var(--ibm-plex-mono),sans-serif;
- --font-fira: var(--fira-code),sans-serif;
- --font-jetbrains: var(--jetbrains),sans-serif;
-
---animate-wiggle: wiggle 1s ease-in-out infinite;
+  --font-sans: var(--ibm-plex-mono), sans-serif;
+  --font-fira: var(--fira-code), sans-serif;
+  --font-jetbrains: var(--jetbrains), sans-serif;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
   @keyframes wiggle {
     0%,
     100% {
@@ -164,14 +163,10 @@ body {
 }
 
 @layer components {
-  .main-gradient{
+  .main-gradient {
     @apply bg-gradient-to-r from-[#011627] via-[#1E4E8C] to-[#3178C6];
   }
-
 }
-
-
-
 
 @layer base {
   * {
@@ -181,4 +176,3 @@ body {
     @apply font-sans bg-background text-foreground;
   }
 }
-

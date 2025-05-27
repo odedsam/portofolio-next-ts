@@ -11,7 +11,7 @@ import PiniaIcon from '@/icons/pinia.svg';
 import ReduxIcon from '@/icons/redux.svg';
 import NestIcon from '@/icons/Nest.svg';
 import NuxtIcon from '@/icons/nuxt.svg';
-import NextIcon from '@/icons/icons8-nextjs-48.svg';
+import NextIcon from '@/icons/nextjs.svg';
 import ReactIcon from '@/icons/React.svg';
 import VueIcon from '@/icons/vue.svg';
 import ZustandIcon from '@/icons/zustandIcon.svg';
