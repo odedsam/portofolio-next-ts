@@ -19,40 +19,10 @@ import {
   ExpressJSIcon,
 } from '@/icons';
 
-const FRONTEND = [
-  { icon: ReactIcon, text: 'React' },
-  { icon: NextIcon, text: 'Next' },
-  { icon: NuxtIcon, text: 'Nuxt' },
-  { icon: VueIcon, text: 'Vue' },
-  { icon: TypeScriptIcon, text: 'TypeScript' },
-  { icon: TailwindIcon, text: 'Tailwind' },
-  { icon: HTMLIcon, text: 'HTML' },
-  { icon: CSSIcon, text: 'CSS' },
-  { icon: JavaScriptIcon, text: 'JavaScript' },
-];
-
-const STATE_MANAGEMENT = [
-  { icon: ReduxIcon, text: 'Redux' },
-  { icon: PiniaIcon, text: 'Pinia' },
-  { icon: ZustandIcon, text: 'Zustand' },
-];
-
-const BACKEND = [
-  { icon: NodejsIcon, text: 'NodeJS' },
-  { icon: ExpressJSIcon, text: 'ExpressJS' },
-  { icon: NestIcon, text: 'NestJS' },
-];
-
-const DATABASE = [
-  { icon: MongoIcon, text: 'MongoDB' },
-  { icon: PostgressIcon, text: 'PostgresSQL' },
-  { icon: FireBaseIcon, text: 'FireBase' },
-];
-
 export type SkillCategory = 'Frontend' | 'Backend' | 'Database & Auth' | 'State Management';
 
 export type SkillEntry = {
-  icon: string; // use path from public/icons
+  icon: string;
   text: string;
 };
 
