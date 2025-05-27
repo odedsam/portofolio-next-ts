@@ -18,8 +18,8 @@ export function MobileSkillsFinder() {
 
       <div className="flex-1 overflow-y-auto bg-zinc-900">
         {Object.entries(skillsMap).map(([category, items]) => (
-          <div key={category} className="px-4 py-3 border-b border-neutral-800">
-            <h2 className="text-sm font-semibold text-gray-300 mb-3">{category}</h2>
+          <div key={category} className="px-4 py-6 border-b border-neutral-800">
+            <h2 className="text-sm font-semibold text-gray-300 mb-8">{category}</h2>
             <div className="grid grid-cols-3 gap-4">
               {items.map(({ icon, text }) => (
                 <div key={text} className="flex flex-col items-center text-center">
