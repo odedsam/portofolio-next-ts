@@ -1,4 +1,4 @@
-import HomeSection from '@/app/components/sections/HomeSection';
+import HeroSection from '@/app/components/sections/HeroSection';
 import ContactSection from '@/app/components/sections/ContactSection';
 import ProjectSection from './components/sections/ProjectSection';
 import SkillsSection from './components/sections/SkillsSection';
@@ -6,7 +6,7 @@ import SkillsSection from './components/sections/SkillsSection';
 export default function Home() {
   return (
     <div className="w-full">
-      <HomeSection />
+      <HeroSection />
       <SkillsSection />
       <ProjectSection />
       <ContactSection />
