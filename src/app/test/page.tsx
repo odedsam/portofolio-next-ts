@@ -1,9 +1,9 @@
-import MacTerminal from "../components/ui/MacTerminal";
+import { ResponsiveSkills } from "../components/features/ResponsiveSkillBox";
 
 export default function page() {
   return (
-      <div className="">
-        <MacTerminal />
+      <div className="my-26">
+       <ResponsiveSkills />
       </div>
   );
 }
