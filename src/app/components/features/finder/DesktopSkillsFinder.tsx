@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { skillsMap, SkillCategory } from '@/data/skills-map'
 import { SkillTile } from './SkillsTile'
 
-export function SkillsExplorer() {
+export function DesktopSkillsFinder() {
   const [activeCategory, setActiveCategory] = useState<SkillCategory>('Frontend')
 
   return (

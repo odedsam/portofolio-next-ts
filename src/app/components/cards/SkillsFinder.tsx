@@ -2,7 +2,7 @@
 
 import { SkillCategory, SkillEntry, skillsMap } from '@/data/skills-map'
 import { useState } from 'react'
-import { SkillIcon } from '../SkillIcon'
+import { SkillIcon } from '../features/finder/SkillIcon'
 
 export function SkillsFinder() {
   const [selected, setSelected] = useState<SkillCategory>('Frontend')

@@ -1,4 +1,4 @@
-import { ResponsiveSkills } from "../components/features/ResponsiveSkillBox";
+import { ResponsiveSkills } from "../components/features/finder/ResponsiveSkillBox";
 
 export default function page() {
   return (
