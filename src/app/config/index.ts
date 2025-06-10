@@ -39,6 +39,14 @@ export const SKILLS: IconLabelProps[] = [
 ];
 
 export const PROJECTS: Project[] = [
+   {
+    title: 'Aura Stream',
+    description: 'Full-stack streaming platform leveraging TMDB API for movies and shows with PostgreSQL, Prisma, and Next.js backend.',
+    tech: ['TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'Zustand','TMDB API'],
+    href: 'https://aura-stream.vercel.app/',
+    githubMonorepo: 'https://github.com/fragged-up/stream-vibe',
+    pinned: true,
+  },
   {
     title: 'Estatein RealEstate',
     description: 'High-end real estate website with property listings, filters, and booking system.',
