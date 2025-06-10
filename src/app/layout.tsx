@@ -26,7 +26,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'OdedSam | Full Stack Dev',
+  title: 'oded_sam | Full Stack Dev',
   description: 'Home Page',
 };
 type RootLayoutProps = Readonly<{
