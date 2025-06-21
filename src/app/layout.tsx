@@ -40,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AppHeader />
           <MobileHeader />
-          <main className="w-full -z-40">{children}</main>
+          <main className="w-full -z-40 dark:stars-dark stars-light">{children}</main>
         </ThemeProvider>
       </body>
     </html>
