@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Fira_Code,IBM_Plex_Mono, JetBrains_Mono } from 'next/font/google';
-import './globals.css';
 import { ThemeProvider } from './components/providers/ThemeProvider';
 import AppHeader from '@/app/components/layouts/AppHeader';
 import MobileHeader from '@/app/components/layouts/MobileHeader';
+import './globals.css';
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: '--font-sans',
@@ -26,7 +26,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'oded_sam | Full Stack Dev',
+  title: 'Oded.Dev | Full Stack Dev',
   description: 'Home Page',
 };
 type RootLayoutProps = Readonly<{
