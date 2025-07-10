@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import FinderThumbnails from '../features/finder/FinderThumbnails';
+import FinderThumbnails from '../../features/finder/FinderThumbnails';
 
 const PROMPT = `I transform ideas into elegant, functional applications. With over 3 years of hands-on experience building end-to-end solutions, I blend creative design with robust backend architecture to create memorable digital experiences.`;
 

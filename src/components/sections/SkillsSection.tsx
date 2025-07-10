@@ -1,4 +1,4 @@
-import { ResponsiveSkills } from '../features/finder/ResponsiveSkillBox';
+import { ResponsiveSkills } from '../../features/finder/ResponsiveSkillBox';
 
 export default function SkillsSection() {
   return (
