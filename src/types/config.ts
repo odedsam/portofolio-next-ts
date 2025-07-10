@@ -54,7 +54,7 @@ export type Config = {
   resume?: {
     fileUrl?: string;
   };
-  skills?: any[]; // תחליף לפי סוג הנתונים שלך
+  skills?: any[];
   experiences?: {
     company?: string;
     position?: string;
@@ -95,7 +95,7 @@ export type Config = {
     displayAvatarRing?: boolean;
     themes?: string[];
   };
-  footer?: any; // תחליף לפי מבנה ה-footer שלך
+  footer?: any;
   enablePWA?: boolean;
 };
 
