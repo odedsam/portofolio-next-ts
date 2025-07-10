@@ -95,7 +95,6 @@ const ExternalProjectCard = ({ externalProjects, header, loading, googleAnalytic
                           src={item.imageUrl}
                           alt="thumbnail"
                           width={200}
-                          priority={index === 0}
                           height={96}
                           className="w-full h-full object-cover"
                           blurDataURL={FALLBACK_IMAGE}
