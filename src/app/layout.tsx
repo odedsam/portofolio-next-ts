@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Fira_Code,IBM_Plex_Mono, JetBrains_Mono } from 'next/font/google';
-import { ThemeProvider } from './components/providers/ThemeProvider';
-import AppHeader from '@/app/components/layouts/AppHeader';
-import MobileHeader from '@/app/components/layouts/MobileHeader';
+import { Fira_Code, IBM_Plex_Mono, JetBrains_Mono } from 'next/font/google';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
+import AppHeader from '@/components/layouts/AppHeader';
+import MobileHeader from '@/components/layouts/MobileHeader';
 import './globals.css';
 
 const ibmPlexMono = IBM_Plex_Mono({

@@ -1,5 +1,5 @@
 import { socials } from '@/app/config/nav';
-import { ThemeToggle } from '@/app/components/ui/ThemeToggle';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export default function SocialLinks() {
   return (

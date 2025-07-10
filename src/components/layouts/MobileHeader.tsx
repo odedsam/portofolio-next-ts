@@ -1,6 +1,6 @@
 'use client';
 import { ArrowLeft, Menu } from 'lucide-react';
-import { Button } from '@/app/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { SideBar } from '../ui/SideBar';
 import { useState } from 'react';
 import { ThemeToggle } from '../ui/ThemeToggle';
