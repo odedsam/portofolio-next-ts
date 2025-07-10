@@ -1,8 +1,44 @@
+'use client';
+
+import { useRef } from 'react';
+import { MdEmail, MdSend } from 'react-icons/md';
+
 export default function ContactSection() {
+  const formRef = useRef<HTMLFormElement>(null);
+
   return (
-    <section className="py-16 px-6 text-center">
-      <h2 className="text-4xl font-bold mb-6 dark:text-white drop-shadow-lg font-fira">Contact Me</h2>
-      <p className="text-gray-300 font-sans font-semibold">Email: oded@970@gmail.com</p>
+    <section id="contact" className="py-20 px-6 bg-base-200 border-t border-base-300">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="flex justify-center items-center gap-2 mb-4">
+          <MdEmail className="text-3xl text-primary" />
+          <h2 className="text-3xl font-bold text-base-content">Let's Connect</h2>
+        </div>
+
+        <p className="text-base-content/70 mb-10">Have a project in mind, job offer, or just want to say hi? I’d love to hear from you.</p>
+
+        <form
+          ref={formRef}
+          onSubmit={(e) => {
+            e.preventDefault();
+            alert('Form submission is disabled. Contact me via email instead.');
+          }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+          <input type="text" placeholder="Your Name" required className="input input-bordered w-full" />
+          <input type="email" placeholder="Your Email" required className="input input-bordered w-full" />
+          <textarea placeholder="Your Message" required className="textarea textarea-bordered md:col-span-2 w-full min-h-[140px]" />
+          <button type="submit" className="btn btn-primary md:col-span-2 gap-2">
+            <MdSend />
+            Send Message
+          </button>
+        </form>
+
+        <div className="mt-10 text-sm text-base-content/60">
+          Or email me directly at:{' '}
+          <a className="underline" href="mailto:oded970@gmail.com">
+            oded970@gmail.com
+          </a>
+        </div>
+      </div>
     </section>
   );
 }

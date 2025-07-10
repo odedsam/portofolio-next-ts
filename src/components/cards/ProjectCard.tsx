@@ -11,6 +11,7 @@ export type Project = {
   githubClientUrl?: string;
   githubServerUrl?: string;
   pinned?: boolean;
+  imageUrl?:string;
 };
 
 type GithubLinksType = {

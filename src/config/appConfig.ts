@@ -22,6 +22,6 @@ export const jetBrainsMono = JetBrains_Mono({
 });
 
 export const appMetaData: Metadata = {
-  title: 'Oded.Dev | Full Stack Dev',
-  description: 'Home Page',
+  title: 'Portofolio of Oded Samuel',
+  description: 'Full Stack Developer',
 };

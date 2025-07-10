@@ -1,4 +1,5 @@
-// app/blog/monolith-to-microservices-journey/page.tsx
+
+import BackToHome from '@/components/BackToHome'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 export default function MicroservicesJourneyPost() {
   return (
     <article className="max-w-4xl mx-auto px-6 py-12">
+       <div className='py-8'> <BackToHome /></div>
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           From Monolith to Microservices: A Real-World Journey

@@ -44,7 +44,8 @@ export const PROJECTS: Project[] = [
     description: 'Full-stack streaming platform leveraging TMDB API for movies and shows with PostgreSQL, Prisma, and Next.js backend.',
     tech: ['TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'Zustand', 'TMDB API'],
     href: 'https://aura-stream.vercel.app/',
-    githubMonorepo: 'https://github.com/fragged-up/stream-vibe',
+    githubMonorepo: 'https://github.com/odedsam/stream-vibe',
+    imageUrl:"/thumb/aurastream-catalog.png",
     pinned: true,
   },
   {
@@ -52,51 +53,25 @@ export const PROJECTS: Project[] = [
     description: 'High-end real estate website with property listings, filters, and booking system.',
     tech: ['TypeScript', 'Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'FirebaseDB'],
     href: 'https://estate-app-nuxt3.vercel.app',
-    githubMonorepo: 'https://github.com/fragged-up/Estate-App-nuxt3',
+    githubMonorepo: 'https://github.com/odedsam/Estate-App-nuxt3',
+    imageUrl:"/thumb/estatein-thumbnail.png",
     pinned: true,
   },
-  {
-    title: 'Avion E‑Commerce',
-    description: 'Scalable e‑commerce app with CMS integration, shopping cart, and responsive UI.',
-    tech: ['TypeScript', 'React', 'Tailwind', 'NestJS', 'ReduxRTK', 'MongoDB'],
-    href: 'https://avion-steel.vercel.app/',
-    githubClientUrl: 'https://github.com/fragged-up/avion-new-react-18',
-    githubServerUrl: 'https://github.com/fragged-up/avm-back',
-    pinned: true,
-  },
-  {
-    title: 'Candleaf E‑Commerce',
-    description: 'Minimalist online store built with Next.js, TailwindCSS, and Stripe integration.',
-    tech: ['TypeScript', 'Vue 3', 'NodeJs', 'MongoDB', 'GoogleAuth', 'Tailwind', 'Stripe', 'Express'],
-    href: 'https://candleaf-front.vercel.app',
-    githubClientUrl: 'https://github.com/fragged-up/candleaf-front',
-    githubServerUrl: 'https://github.com/fragged-up/candleaf-back',
-    pinned: true,
-  },
-
-  {
-    title: 'Hasa Media',
-    description: 'Media services agency website with CMS-managed content and service showcase.',
-    tech: ['TypeScript', 'React', 'CMS', 'PHP'],
-    href: 'https://hasamedia.io',
-    githubClientUrl: 'https://github.com/fragged-up/Hasamedia',
-    githubMonorepo: 'https://github.com/fragged-up/Hasamedia',
-    pinned: true,
-  },
-
-  {
+     {
     title: 'Noad',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://noad.vercel.app',
-    githubMonorepo: 'https://github.com/fragged-up/crypto-dash',
+    imageUrl:"/thumb/noad-thumbnail.png",
+    githubMonorepo: 'https://github.com/odedsam/crypto-dash',
   },
-  {
+   {
     title: 'Explore Moon',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://explore-moon.vercel.app',
-    githubMonorepo: 'https://github.com/fragged-up/crypto-dash',
+    imageUrl:"/thumb/explore-moon-thumbnail.png",
+    githubMonorepo: 'https://github.com/odedsam/explore-moon',
   },
 
   {
@@ -104,28 +79,68 @@ export const PROJECTS: Project[] = [
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://pierced.vercel.app/',
-    githubMonorepo: 'https://github.com/fragged-up/crypto-dash',
+    imageUrl:"/thumb/pierced-thumbnail.png",
+    githubMonorepo: 'https://github.com/odedsam/Pierced',
   },
+   {
+    title: 'Candleaf E‑Commerce',
+    description: 'Minimalist online store built with Next.js, TailwindCSS, and Stripe integration.',
+    tech: ['TypeScript', 'Vue 3', 'NodeJs', 'MongoDB', 'GoogleAuth', 'Tailwind', 'Stripe', 'Express'],
+    href: 'https://candleaf-front.vercel.app',
+    githubClientUrl: 'https://github.com/odedsam/candleaf-front',
+    githubServerUrl: 'https://github.com/odedsam/candleaf-back',
+     imageUrl:"/thumb/candleaf-thumbnail.png",
+    pinned: true,
+  },
+
+  {
+    title: 'Avion E‑Commerce',
+    description: 'Scalable e‑commerce app with CMS integration, shopping cart, and responsive UI.',
+    tech: ['TypeScript', 'React', 'Tailwind', 'NestJS', 'ReduxRTK', 'MongoDB'],
+    href: 'https://avion-steel.vercel.app/',
+    githubClientUrl: 'https://github.com/odedsam/avion-new-react-18',
+    githubServerUrl: 'https://github.com/odedsam/avm-back',
+    imageUrl:"/thumb/avion-thumbnail.png",
+    pinned: true,
+  },
+
+
+  {
+    title: 'Hasa Media',
+    description: 'Media services agency website with CMS-managed content and service showcase.',
+    tech: ['TypeScript', 'React', 'CMS', 'PHP'],
+    href: 'https://hasamedia.io',
+    githubClientUrl: 'https://github.com/odedsam/Hasamedia',
+    githubMonorepo: 'https://github.com/odedsam/Hasamedia',
+     imageUrl:"/thumb/hasamedia-thumbnail.png",
+    pinned: true,
+  },
+
+
+
 
   {
     title: 'Lernaean',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://lernaean.vercel.app/',
-    githubMonorepo: 'https://github.com/fragged-up/crypto-dash',
+    imageUrl:"/thumb/lernaean-thumbnail.png",
+    githubMonorepo: 'https://github.com/odedsam/lernaean',
   },
   {
     title: 'Cyber Skin',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://cyberskin.vercel.app/',
-    githubMonorepo: 'https://github.com/fragged-up/crypto-dash',
+    imageUrl:"/thumb/cyberskin-thumbnail.png",
+    githubMonorepo: 'https://github.com/odedsam/cyberskin',
   },
   {
     title: 'Crypto Pulse',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://crypto-dash-flame.vercel.app',
-    githubMonorepo: 'https://github.com/fragged-up/crypto-dash',
+    imageUrl:"/thumb/cryptodash-thumbnail.png",
+    githubMonorepo: 'https://github.com/odedsam/crypto-dash',
   },
 ];

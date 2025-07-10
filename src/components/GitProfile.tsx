@@ -13,15 +13,18 @@ import SkillCard from '@/components/cards/SkillCard';
 import AvatarCard from '@/components/cards/AvatarCard';
 import DetailsCard from '@/components/cards/DetailsCard';
 import ExperienceCard from '@/components/cards/ExperienceCard';
-import BlogCard from '@/components/cards/BlogCard';
 import CertificationCard from '@/components/cards/CertificationCard';
 import PublicationCard from '@/components/cards/PublicationCard';
-import EducationCard from '@/components/cards/EducationCard';
+import EducationCard from '@/components/cards/GenCard';
 import ErrorPage from '@/components/ErrorPage';
 
 import GithubProjectCard from '@/components/cards/GithubProjectCard';
 import ExternalProjectCard from '@/components/cards/ExternalProjectCard';
-import Footer from '@/components/layouts/AppFooter';
+import Footer from '@/components/Footer';
+import GenCard from '@/components/cards/GenCard';
+import BlogSection from './sections/BlogSection';
+import AboutSection from './sections/AboutSection';
+import ContactSection from './sections/ContactSection';
 
 /**
  * Renders the GitProfile component.
@@ -93,7 +96,7 @@ const GitProfile = ({ config }: { config: Config }) => {
         avatar: data.avatar_url,
         name: data.name || ' ',
         bio: data.bio || '',
-        location: data.location || '',
+        location: data.location || 'Israel',
         company: data.company || '',
       });
 
@@ -184,7 +187,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                             typeof exp.company === 'string' &&
                             typeof exp.position === 'string' &&
                             typeof exp.from === 'string' &&
-                            typeof exp.to === 'string'
+                            typeof exp.to === 'string',
                         )
                         .map((exp) => ({
                           ...exp,
@@ -198,28 +201,37 @@ const GitProfile = ({ config }: { config: Config }) => {
                   {sanitizedConfig.certifications.length !== 0 && (
                     <CertificationCard
                       loading={loading}
-                      certifications={sanitizedConfig.certifications.map(cert => ({
+                      certifications={sanitizedConfig.certifications.map((cert) => ({
                         ...cert,
                         year: cert.year !== undefined ? String(cert.year) : undefined,
                       }))}
                     />
                   )}
-                  {sanitizedConfig.educations.length !== 0 && (
-                    <EducationCard
-                      loading={loading}
-                      educations={sanitizedConfig.educations.map(edu => ({
-                        ...edu,
-                        institution: edu.institution ?? '',
-                        degree: edu.degree ?? '',
-                        from: edu.from ?? '',
-                        to: edu.to ?? '',
-                      }))}
-                    />
-                  )}
+                  <GenCard loading={loading} title={'Blogs'} children={<BlogSection />} />
+                  <GenCard loading={loading} title={'About'} children={<AboutSection />} />
+                  <GenCard loading={loading} title={'Contact'} children={<ContactSection />} />
                 </div>
               </div>
               <div className="lg:col-span-2 col-span-1">
                 <div className="grid grid-cols-1 gap-6">
+                  {sanitizedConfig.projects.external.projects.length !== 0 && (
+                    <ExternalProjectCard
+                      loading={loading}
+                      header={sanitizedConfig.projects.external.header}
+                      externalProjects={sanitizedConfig.projects.external.projects}
+                      googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                    />
+                  )}
+
+                  {sanitizedConfig.publications.length !== 0 && (
+                    <PublicationCard
+                      loading={loading}
+                      publications={sanitizedConfig.publications.map((pub) => ({
+                        ...pub,
+                        title: pub.title ?? '',
+                      }))}
+                    />
+                  )}
                   {sanitizedConfig.projects.github.display && (
                     <GithubProjectCard
                       header={sanitizedConfig.projects.github.header}
@@ -229,26 +241,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                       googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
                     />
                   )}
-                  {sanitizedConfig.publications.length !== 0 && (
-                    <PublicationCard
-                      loading={loading}
-                      publications={sanitizedConfig.publications.map(pub => ({
-                        ...pub,
-                        title: pub.title ?? '',
-                      }))}
-                    />
-                  )}
-                  {sanitizedConfig.projects.external.projects.length !== 0 && (
-                    <ExternalProjectCard
-                      loading={loading}
-                      header={sanitizedConfig.projects.external.header}
-                      externalProjects={sanitizedConfig.projects.external.projects}
-                      googleAnalyticId={sanitizedConfig.googleAnalytics.id}
-                    />
-                  )}
-                  {sanitizedConfig.blog.display && (
-                    <BlogCard loading={loading} googleAnalyticsId={sanitizedConfig.googleAnalytics.id} blog={sanitizedConfig.blog} />
-                  )}
                 </div>
               </div>
             </div>
@@ -256,7 +248,7 @@ const GitProfile = ({ config }: { config: Config }) => {
           {sanitizedConfig.footer && (
             <footer className={`p-4 footer ${BG_COLOR} text-base-content footer-center`}>
               <div className="card card-sm bg-base-100 shadow-sm">
-                <Footer content={sanitizedConfig.footer} loading={loading} />
+                <Footer loading={loading} />
               </div>
             </footer>
           )}

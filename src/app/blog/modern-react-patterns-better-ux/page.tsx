@@ -1,4 +1,5 @@
 // app/blog/modern-react-patterns-better-ux/page.tsx
+import BackToHome from '@/components/BackToHome';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -16,7 +17,9 @@ export const metadata: Metadata = {
 
 export default function ModernReactPatternsPost() {
   return (
+
     <article className="max-w-4xl mx-auto px-6 py-12">
+     <div className='py-8'> <BackToHome /></div>
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Modern React Patterns for Better UX</h1>
         <div className="flex items-center gap-4 text-gray-600 mb-6">

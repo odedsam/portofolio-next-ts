@@ -67,6 +67,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             ) : (
               <span className="text-base-content opacity-70">
                 {profile.name}
+                Oded Samuel
               </span>
             )}
           </h5>
@@ -74,24 +75,10 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             {loading || !profile
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
               : profile.bio}
+              Self Taught | Full-Stack Developer | FE Specialist
           </div>
         </div>
-        {resumeFileUrl &&
-          (loading ? (
-            <div className="mt-6">
-              {skeleton({ widthCls: 'w-40', heightCls: 'h-8' })}
-            </div>
-          ) : (
-            <a
-              href={resumeFileUrl}
-              target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
-              download
-              rel="noreferrer"
-            >
-              Download Resume
-            </a>
-          ))}
+
       </div>
     </div>
   );
