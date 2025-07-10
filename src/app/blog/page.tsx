@@ -1,37 +1,46 @@
 import Link from 'next/link';
+
 export default function BlogPage() {
   return (
-   <main className='py-24 lg:mt-12 h-screen -z-40'>
-      <section className="max-w-2xl mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-4">Blog</h1>
-        <p className="text-muted-foreground mb-6">Coming soon: technical articles, tutorials, and personal insights.</p>
+    <main className="py-24 lg:mt-12 min-h-screen">
+      <section className="max-w-3xl mx-auto px-6">
+        <h1 className="text-4xl font-bold mb-4">Blog</h1>
+        <p className="text-muted-foreground mb-10">
+          Articles on modern full-stack development, architecture, and best practices from real-world experience.
+        </p>
 
-        <div className="space-y-6">
-          <div>
-            <h2 className="text-xl font-semibold">1. First Blog Post</h2>
-            <p className="text-muted-foreground mb-4">A brief description of what will be covered in this post.</p>
-            <Link href="/blog?first-post" className="text-primary hover:underline">
+        <div className="space-y-10">
+          <article>
+            <h2 className="text-2xl font-semibold">Modern React Patterns for Better UX</h2>
+            <p className="text-muted-foreground mb-3">
+              Discover advanced patterns in modern React development that enhance user experience, maintainability, and performance.
+            </p>
+            <Link href="/blog/modern-react-patterns-better-ux" className="text-primary hover:underline">
               Read more →
             </Link>
-          </div>
+          </article>
 
-          <div>
-            <h2 className="text-xl font-semibold">2. Second Blog Post</h2>
-            <p className="text-muted-foreground mb-4">Another post preview with a short description of the upcoming content.</p>
-            <Link href="/blog?second-post" className="text-primary hover:underline">
+          <article>
+            <h2 className="text-2xl font-semibold">From Monolith to Microservices: My Journey</h2>
+            <p className="text-muted-foreground mb-3">
+              Lessons learned while migrating a large-scale Node.js application from a monolithic architecture to microservices.
+            </p>
+            <Link href="/blog/monolith-to-microservices-journey" className="text-primary hover:underline">
               Read more →
             </Link>
-          </div>
+          </article>
 
-          <div>
-            <h2 className="text-xl font-semibold">3. Third Blog Post</h2>
-            <p className="text-muted-foreground mb-4">A sneak peek into what this post will talk about.</p>
-            <Link href="/blog?third-post" className="text-primary hover:underline">
+          <article>
+            <h2 className="text-2xl font-semibold">Building a Scalable API with Node.js & TypeScript</h2>
+            <p className="text-muted-foreground mb-3">
+              A practical guide to designing and building production-grade APIs using Node.js, TypeScript, and clean architecture.
+            </p>
+            <Link href="/blog/scalable-api-nodejs-typescript" className="text-primary hover:underline">
               Read more →
             </Link>
-          </div>
+          </article>
         </div>
       </section>
-   </main>
+    </main>
   );
 }
