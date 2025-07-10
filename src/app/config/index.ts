@@ -1,42 +1,4 @@
-import type { IconLabelProps } from '@/app/types';
-import {
-  CSSIcon,
-  FireBaseIcon,
-  HTMLIcon,
-  JavaScriptIcon,
-  MongoIcon,
-  NestIcon,
-  NextIcon,
-  VueIcon,
-  NodejsIcon,
-  NuxtIcon,
-  PiniaIcon,
-  PostgressIcon,
-  ReactIcon,
-  ReduxIcon,
-  TailwindIcon,
-  TypeScriptIcon,
-} from '@/icons';
 import { Project } from '@/components/cards/ProjectCard';
-
-export const SKILLS: IconLabelProps[] = [
-  { icon: CSSIcon, text: 'CSS' },
-  { icon: HTMLIcon, text: 'HTML' },
-  { icon: JavaScriptIcon, text: 'JavaScript' },
-  { icon: TypeScriptIcon, text: 'TypeScript' },
-  { icon: TailwindIcon, text: 'Tailwind' },
-  { icon: ReactIcon, text: 'React' },
-  { icon: NestIcon, text: 'Nest' },
-  { icon: NuxtIcon, text: 'Nuxt' },
-  { icon: NextIcon, text: 'Next' },
-  { icon: VueIcon, text: 'Vue' },
-  { icon: ReduxIcon, text: 'Redux' },
-  { icon: PiniaIcon, text: 'Pinia' },
-  { icon: FireBaseIcon, text: 'FireBase' },
-  { icon: MongoIcon, text: 'MongoDB' },
-  { icon: PostgressIcon, text: 'PostgresSQL' },
-  { icon: NodejsIcon, text: 'Node' },
-];
 
 export const PROJECTS: Project[] = [
   {
@@ -45,7 +7,7 @@ export const PROJECTS: Project[] = [
     tech: ['TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'Zustand', 'TMDB API'],
     href: 'https://aura-stream.vercel.app/',
     githubMonorepo: 'https://github.com/odedsam/stream-vibe',
-    imageUrl:"/thumb/aurastream-catalog.png",
+    imageUrl: '/thumb/aurastream-catalog.png',
     pinned: true,
   },
   {
@@ -54,23 +16,23 @@ export const PROJECTS: Project[] = [
     tech: ['TypeScript', 'Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'FirebaseDB'],
     href: 'https://estate-app-nuxt3.vercel.app',
     githubMonorepo: 'https://github.com/odedsam/Estate-App-nuxt3',
-    imageUrl:"/thumb/estatein-thumbnail.png",
+    imageUrl: '/thumb/estatein-thumbnail.png',
     pinned: true,
   },
-     {
+  {
     title: 'Noad',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://noad.vercel.app',
-    imageUrl:"/thumb/noad-thumbnail.png",
+    imageUrl: '/thumb/noad-thumbnail.png',
     githubMonorepo: 'https://github.com/odedsam/crypto-dash',
   },
-   {
+  {
     title: 'Explore Moon',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://explore-moon.vercel.app',
-    imageUrl:"/thumb/explore-moon-thumbnail.png",
+    imageUrl: '/thumb/explore-moon-thumbnail.png',
     githubMonorepo: 'https://github.com/odedsam/explore-moon',
   },
 
@@ -79,17 +41,17 @@ export const PROJECTS: Project[] = [
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://pierced.vercel.app/',
-    imageUrl:"/thumb/pierced-thumbnail.png",
+    imageUrl: '/thumb/pierced-thumbnail.png',
     githubMonorepo: 'https://github.com/odedsam/Pierced',
   },
-   {
+  {
     title: 'Candleaf E‑Commerce',
     description: 'Minimalist online store built with Next.js, TailwindCSS, and Stripe integration.',
     tech: ['TypeScript', 'Vue 3', 'NodeJs', 'MongoDB', 'GoogleAuth', 'Tailwind', 'Stripe', 'Express'],
     href: 'https://candleaf-front.vercel.app',
     githubClientUrl: 'https://github.com/odedsam/candleaf-front',
     githubServerUrl: 'https://github.com/odedsam/candleaf-back',
-     imageUrl:"/thumb/candleaf-thumbnail.png",
+    imageUrl: '/thumb/candleaf-thumbnail.png',
     pinned: true,
   },
 
@@ -100,10 +62,9 @@ export const PROJECTS: Project[] = [
     href: 'https://avion-steel.vercel.app/',
     githubClientUrl: 'https://github.com/odedsam/avion-new-react-18',
     githubServerUrl: 'https://github.com/odedsam/avm-back',
-    imageUrl:"/thumb/avion-thumbnail.png",
+    imageUrl: '/thumb/avion-thumbnail.png',
     pinned: true,
   },
-
 
   {
     title: 'Hasa Media',
@@ -112,19 +73,16 @@ export const PROJECTS: Project[] = [
     href: 'https://hasamedia.io',
     githubClientUrl: 'https://github.com/odedsam/Hasamedia',
     githubMonorepo: 'https://github.com/odedsam/Hasamedia',
-     imageUrl:"/thumb/hasamedia-thumbnail.png",
+    imageUrl: '/thumb/hasamedia-thumbnail.png',
     pinned: true,
   },
-
-
-
 
   {
     title: 'Lernaean',
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://lernaean.vercel.app/',
-    imageUrl:"/thumb/lernaean-thumbnail.png",
+    imageUrl: '/thumb/lernaean-thumbnail.png',
     githubMonorepo: 'https://github.com/odedsam/lernaean',
   },
   {
@@ -132,7 +90,7 @@ export const PROJECTS: Project[] = [
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://cyberskin.vercel.app/',
-    imageUrl:"/thumb/cyberskin-thumbnail.png",
+    imageUrl: '/thumb/cyberskin-thumbnail.png',
     githubMonorepo: 'https://github.com/odedsam/cyberskin',
   },
   {
@@ -140,7 +98,7 @@ export const PROJECTS: Project[] = [
     description: 'Real-time cryptocurrency dashboard with live price updates, interactive charts, and global market stats.',
     tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
     href: 'https://crypto-dash-flame.vercel.app',
-    imageUrl:"/thumb/cryptodash-thumbnail.png",
+    imageUrl: '/thumb/cryptodash-thumbnail.png',
     githubMonorepo: 'https://github.com/odedsam/crypto-dash',
   },
 ];
