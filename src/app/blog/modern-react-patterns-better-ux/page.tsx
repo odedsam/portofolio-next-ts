@@ -30,7 +30,7 @@ export default function ModernReactPatternsPost() {
           <span>Frontend Development</span>
         </div>
         <p className="text-xl text-gray-700 leading-relaxed">
-          Creating delightful user experiences goes beyond making things look pretty. It's about understanding user behavior, optimizing
+          Creating delightful user experiences goes beyond making things look pretty. It&lsquo;s about understanding user behavior, optimizing
           performance, and implementing patterns that make your app feel fast and responsive.
         </p>
       </header>
@@ -105,7 +105,7 @@ const ArticleCard = ({ articleId }: { articleId: string }) => {
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Smart Data Fetching with SWR</h2>
         <p className="text-gray-700 mb-4">
-          SWR (Stale-While-Revalidate) provides excellent caching and revalidation strategies. Here's how I implement it for optimal UX:
+          SWR (Stale-While-Revalidate) provides excellent caching and revalidation strategies. Here&lsquo;s how I implement it for optimal UX:
         </p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
@@ -399,7 +399,7 @@ const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => (
         </div>
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Performance Monitoring</h2>
-        <p className="text-gray-700 mb-4">Monitor your app's performance with custom hooks and Web Vitals:</p>
+        <p className="text-gray-700 mb-4">Monitor your app&lsquo;s performance with custom hooks and Web Vitals:</p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
           <pre className="text-sm">
@@ -453,7 +453,7 @@ const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => (
         </div>
 
         <p className="text-gray-700 mt-8">
-          Modern React development is about creating experiences that feel native and responsive. By implementing these patterns, you'll
+          Modern React development is about creating experiences that feel native and responsive. By implementing these patterns, you&lsquo;ll
           build applications that not only work well but also delight your users with smooth, intuitive interactions.
         </p>
       </div>

@@ -31,7 +31,7 @@ export default function ScalableAPIsPost() {
           <span>Backend Development</span>
         </div>
         <p className="text-xl text-gray-700 leading-relaxed">
-          After 3.5 years of building production APIs, I've learned that scalability isn't just about handling more requests—it's about
+          After 3.5 years of building production APIs, I&lsquo;ve learned that scalability isn&lsquo;t just about handling more requests—it&lsquo;s about
           creating maintainable, robust systems that can evolve with your business needs.
         </p>
       </header>
@@ -39,7 +39,7 @@ export default function ScalableAPIsPost() {
       <div className="prose prose-lg max-w-none">
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">The Foundation: TypeScript + Express</h2>
         <p className="text-gray-700 mb-6">
-          Starting with a solid foundation is crucial. TypeScript provides the type safety that becomes invaluable as your API grows. Here's
+          Starting with a solid foundation is crucial. TypeScript provides the type safety that becomes invaluable as your API grows. Here&lsquo;s
           how I structure my Node.js APIs for maximum scalability:
         </p>
 
@@ -223,7 +223,7 @@ export const errorHandler = (
 
         <p className="text-gray-700 mt-8">
           Building scalable APIs is an iterative process. Start with solid foundations, measure performance, and optimize based on
-          real-world usage patterns. The patterns I've shared here have served me well across multiple production applications.
+          real-world usage patterns. The patterns I&lsquo;ve shared here have served me well across multiple production applications.
         </p>
       </div>
 

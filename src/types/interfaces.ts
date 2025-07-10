@@ -170,3 +170,9 @@ export interface Article {
   categories: string[];
 }
 
+
+export type AppError = unknown & {
+  message?: string;
+  name?: string;
+  stack?: string;
+};

@@ -15,7 +15,6 @@ import DetailsCard from '@/components/cards/DetailsCard';
 import ExperienceCard from '@/components/cards/ExperienceCard';
 import CertificationCard from '@/components/cards/CertificationCard';
 import PublicationCard from '@/components/cards/PublicationCard';
-import EducationCard from '@/components/cards/GenCard';
 import ErrorPage from '@/components/ErrorPage';
 
 import GithubProjectCard from '@/components/cards/GithubProjectCard';
@@ -32,6 +31,7 @@ import ContactSection from './sections/ContactSection';
  * @param {Object} config - the configuration object
  * @return {JSX.Element} the rendered GitProfile component
  */
+
 const GitProfile = ({ config }: { config: Config }) => {
   const [sanitizedConfig] = useState<SanitizedConfig | Record<string, never>>(getSanitizedConfig(config));
   const [theme, setTheme] = useState<string>(DEFAULT_THEMES[0]);
@@ -124,12 +124,12 @@ const GitProfile = ({ config }: { config: Config }) => {
   }, [sanitizedConfig, loadData]);
 
   useEffect(() => {
-    theme && document.documentElement.setAttribute('data-theme', theme);
+    if (theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
   }, [theme]);
 
   const handleError = (error: AxiosError | Error): void => {
-    console.error('Error:', error);
-
     if (error instanceof AxiosError) {
       try {
         const reset = formatDistance(new Date(error.response?.headers?.['x-ratelimit-reset'] * 1000), new Date(), { addSuffix: true });
@@ -149,8 +149,10 @@ const GitProfile = ({ config }: { config: Config }) => {
         } else {
           setError(GENERIC_ERROR);
         }
-      } catch (innerError) {
-        setError(GENERIC_ERROR);
+      } catch (innerError: unknown) {
+        if (innerError) {
+          setError(GENERIC_ERROR);
+        }
       }
     } else {
       setError(GENERIC_ERROR);
@@ -207,9 +209,18 @@ const GitProfile = ({ config }: { config: Config }) => {
                       }))}
                     />
                   )}
-                  <GenCard loading={loading} title={'Blogs'} children={<BlogSection />} />
-                  <GenCard loading={loading} title={'About'} children={<AboutSection />} />
-                  <GenCard loading={loading} title={'Contact'} children={<ContactSection />} />
+                  <GenCard loading={loading} title={'Blogs'}>
+                    <BlogSection />{' '}
+                  </GenCard>
+
+                  <GenCard loading={loading} title={'About'}>
+                    <AboutSection />
+                  </GenCard>
+
+                  <GenCard loading={loading} title={'Contact'}>
+                    {' '}
+                    <ContactSection />
+                  </GenCard>
                 </div>
               </div>
               <div className="lg:col-span-2 col-span-1">

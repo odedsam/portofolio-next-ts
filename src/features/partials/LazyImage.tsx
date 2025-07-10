@@ -1,4 +1,4 @@
-import { useState, Fragment, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 /**
  * LazyImage component.
@@ -29,9 +29,14 @@ const LazyImage: React.FC<{
   }, [src]);
 
   return (
-    <Fragment>
-      {loading ? placeholder : <img src={src} alt={alt} {...rest} />}
-    </Fragment>
+    <>
+      {loading ? (
+        placeholder
+      ) : (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={src} alt={alt} {...rest} />
+      )}
+    </>
   );
 };
 

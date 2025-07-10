@@ -1,28 +1,30 @@
-
-import BackToHome from '@/components/BackToHome'
-import { Metadata } from 'next'
+import BackToHome from '@/components/BackToHome';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'From Monolith to Microservices: A Real-World Journey | Your Name',
-  description: 'Learn from my experience migrating a monolithic application to microservices architecture, including challenges, solutions, and lessons learned.',
+  description:
+    'Learn from my experience migrating a monolithic application to microservices architecture, including challenges, solutions, and lessons learned.',
   keywords: ['Microservices', 'Architecture', 'DevOps', 'Scalability', 'Migration'],
   authors: [{ name: 'Your Name' }],
   openGraph: {
     title: 'From Monolith to Microservices: A Real-World Journey',
-    description: 'Learn from my experience migrating a monolithic application to microservices architecture, including challenges, solutions, and lessons learned.',
+    description:
+      'Learn from my experience migrating a monolithic application to microservices architecture, including challenges, solutions, and lessons learned.',
     type: 'article',
     publishedTime: '2024-10-15',
   },
-}
+};
 
 export default function MicroservicesJourneyPost() {
   return (
     <article className="max-w-4xl mx-auto px-6 py-12">
-       <div className='py-8'> <BackToHome /></div>
+      <div className="py-8">
+        {' '}
+        <BackToHome />
+      </div>
       <header className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          From Monolith to Microservices: A Real-World Journey
-        </h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">From Monolith to Microservices: A Real-World Journey</h1>
         <div className="flex items-center gap-4 text-gray-600 mb-6">
           <time dateTime="2024-10-15">October 15, 2024</time>
           <span>•</span>
@@ -31,14 +33,17 @@ export default function MicroservicesJourneyPost() {
           <span>Architecture</span>
         </div>
         <p className="text-xl text-gray-700 leading-relaxed">
-          Last year, I led the migration of a monolithic e-commerce platform to a microservices architecture. Here's what I learned about the technical challenges, organizational changes, and architectural decisions that made this transformation successful.
+          Last year, I led the migration of a monolithic e-commerce platform to a microservices architecture. Here&lsquo;s what I learned
+          about the technical challenges, organizational changes, and architectural decisions that made this transformation successful.
         </p>
       </header>
 
       <div className="prose prose-lg max-w-none">
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">The Starting Point</h2>
         <p className="text-gray-700 mb-6">
-          Our monolithic application was a typical Node.js/Express app with a PostgreSQL database. It handled user authentication, product catalog, inventory management, order processing, and payment integration. While it served us well initially, we were hitting several pain points:
+          Our monolithic application was a typical Node.js/Express app with a PostgreSQL database. It handled user authentication, product
+          catalog, inventory management, order processing, and payment integration. While it served us well initially, we were hitting
+          several pain points:
         </p>
 
         <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
@@ -54,7 +59,8 @@ export default function MicroservicesJourneyPost() {
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Planning the Migration Strategy</h2>
         <p className="text-gray-700 mb-4">
-          We adopted the "Strangler Fig" pattern, gradually replacing parts of the monolith with microservices. Here's how we approached the planning:
+          We adopted the &quot;Strangler Fig&quot; pattern, gradually replacing parts of the monolith with microservices. Here&lsquo;s how we
+          approached the planning:
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">1. Domain-Driven Design</h3>
@@ -107,7 +113,7 @@ export default function MicroservicesJourneyPost() {
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
           <pre className="text-sm">
-{`// Data migration approach
+            {`// Data migration approach
 const migrationStrategy = {
   phase1: {
     approach: 'Shared Database',
@@ -150,18 +156,14 @@ interface UserServiceData {
         </div>
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Implementation: Service Communication</h2>
-        <p className="text-gray-700 mb-4">
-          We implemented both synchronous and asynchronous communication patterns based on use cases:
-        </p>
+        <p className="text-gray-700 mb-4">We implemented both synchronous and asynchronous communication patterns based on use cases:</p>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">API Gateway Pattern</h3>
-        <p className="text-gray-700 mb-4">
-          We used an API Gateway to handle cross-cutting concerns and route requests:
-        </p>
+        <p className="text-gray-700 mb-4">We used an API Gateway to handle cross-cutting concerns and route requests:</p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
           <pre className="text-sm">
-{`// API Gateway implementation with Express
+            {`// API Gateway implementation with Express
 import express from 'express';
 import httpProxy from 'http-proxy-middleware';
 import rateLimit from 'express-rate-limit';
@@ -226,13 +228,11 @@ routes.forEach(route => {
         </div>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Event-Driven Architecture</h3>
-        <p className="text-gray-700 mb-4">
-          For asynchronous communication, we implemented an event-driven architecture using RabbitMQ:
-        </p>
+        <p className="text-gray-700 mb-4">For asynchronous communication, we implemented an event-driven architecture using RabbitMQ:</p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
           <pre className="text-sm">
-{`// Event system implementation
+            {`// Event system implementation
 class EventBus {
   private connection: amqp.Connection;
   private channel: amqp.Channel;
@@ -314,17 +314,15 @@ class OrderService {
 
         <h2 className="text-2xl font-semibent text-gray-900 mt-8 mb-4">DevOps and Deployment</h2>
         <p className="text-gray-700 mb-4">
-          Microservices require robust DevOps practices. Here's how we handled deployment and monitoring:
+          Microservices require robust DevOps practices. Here&lsquo;s how we handled deployment and monitoring:
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Docker and Kubernetes</h3>
-        <p className="text-gray-700 mb-4">
-          Each service runs in its own container with Kubernetes for orchestration:
-        </p>
+        <p className="text-gray-700 mb-4">Each service runs in its own container with Kubernetes for orchestration:</p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
           <pre className="text-sm">
-{`# Dockerfile for a typical service
+            {`# Dockerfile for a typical service
 FROM node:18-alpine
 
 WORKDIR /app
@@ -391,13 +389,11 @@ spec:
         </div>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">CI/CD Pipeline</h3>
-        <p className="text-gray-700 mb-4">
-          We implemented independent deployment pipelines for each service:
-        </p>
+        <p className="text-gray-700 mb-4">We implemented independent deployment pipelines for each service:</p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
           <pre className="text-sm">
-{`# GitHub Actions workflow
+            {`# GitHub Actions workflow
 name: Deploy User Service
 
 on:
@@ -444,13 +440,11 @@ jobs:
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Distributed Tracing</h3>
-        <p className="text-gray-700 mb-4">
-          Using Jaeger for distributed tracing to track requests across services:
-        </p>
+        <p className="text-gray-700 mb-4">Using Jaeger for distributed tracing to track requests across services:</p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
           <pre className="text-sm">
-{`import { initTracer } from 'jaeger-client';
+            {`import { initTracer } from 'jaeger-client';
 import opentracing from 'opentracing';
 
 const tracer = initTracer({
@@ -553,13 +547,15 @@ class UserRepository {
           </div>
 
           <div className="border-l-4 border-orange-400 pl-4">
-            <h4 className="font-semibold text-orange-900">Don't Rush</h4>
+            <h4 className="font-semibold text-orange-900">Don&lsquo;t Rush</h4>
             <p className="text-orange-800">Take time to get each service right before moving to the next one.</p>
           </div>
         </div>
 
         <p className="text-gray-700 mt-8">
-          The journey from monolith to microservices is challenging but rewarding. It's not just a technical transformation—it's an organizational one. The key is to approach it methodically, learn from each step, and be prepared to adapt your strategy as you go.
+          The journey from monolith to microservices is challenging but rewarding. It&lsquo;s not just a technical transformation—it&lsquo;s an
+          organizational one. The key is to approach it methodically, learn from each step, and be prepared to adapt your strategy as you
+          go.
         </p>
       </div>
 
@@ -573,15 +569,11 @@ class UserRepository {
             </div>
           </div>
           <div className="flex gap-4">
-            <button className="text-blue-600 hover:text-blue-800 font-medium">
-              Share
-            </button>
-            <button className="text-gray-600 hover:text-gray-800 font-medium">
-              Save
-            </button>
+            <button className="text-blue-600 hover:text-blue-800 font-medium">Share</button>
+            <button className="text-gray-600 hover:text-gray-800 font-medium">Save</button>
           </div>
         </div>
       </footer>
     </article>
-  )
+  );
 }

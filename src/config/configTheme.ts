@@ -2,8 +2,9 @@ import React from 'react';
 import { hotjar } from 'react-hotjar';
 import { LOCAL_STORAGE_KEY_NAME } from '@/config';
 import { DEFAULT_THEMES } from '@/config/themes';
-import colors from '@/config/colors.json';
 import { SanitizedConfig, SanitizedHotjar, SanitizedThemeConfig, Config } from '@/types/config';
+import type { AppError } from '@/types';
+import colors from '@/config/colors.json';
 
 export const isDarkishTheme = (appliedTheme: string): boolean => {
   return ['dark', 'halloween', 'forest', 'black', 'luxury', 'dracula'].includes(appliedTheme);
@@ -105,7 +106,8 @@ export const getSanitizedConfig = (config: Config): SanitizedConfig | Record<str
       footer: config?.footer,
       enablePWA: config?.enablePWA ?? true,
     };
-  } catch (error) {
+  } catch (error: unknown) {
+    console.error(error)
     return {};
   }
 };
@@ -169,8 +171,8 @@ export const ga = {
     try {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any)?.gtag('event', action, params);
-    } catch (error) {
-      console.error(error);
+    } catch (error: unknown) {
+      console.error((error as AppError)?.message);
     }
   },
 };

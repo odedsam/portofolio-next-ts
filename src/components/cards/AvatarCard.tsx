@@ -18,12 +18,7 @@ interface AvatarCardProps {
  * @param resumeFileUrl - The URL of the resume file.
  * @returns JSX element representing the AvatarCard.
  */
-const AvatarCard: React.FC<AvatarCardProps> = ({
-  profile,
-  loading,
-  avatarRing,
-  resumeFileUrl,
-}): React.JSX.Element => {
+const AvatarCard: React.FC<AvatarCardProps> = ({ profile, loading, avatarRing }): React.JSX.Element => {
   return (
     <div className="card shadow-lg card-sm bg-base-100">
       <div className="grid place-items-center py-8">
@@ -39,13 +34,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
           </div>
         ) : (
           <div className="avatar opacity-90">
-            <div
-              className={`mb-8 rounded-full w-32 h-32 ${
-                avatarRing
-                  ? 'ring-3 ring-primary ring-offset-base-100 ring-offset-2'
-                  : ''
-              }`}
-            >
+            <div className={`mb-8 rounded-full w-32 h-32 ${avatarRing ? 'ring-3 ring-primary ring-offset-base-100 ring-offset-2' : ''}`}>
               {
                 <LazyImage
                   src={profile.avatar ? profile.avatar : FALLBACK_IMAGE}
@@ -72,13 +61,10 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             )}
           </h5>
           <div className="mt-3 text-base-content font-mono">
-            {loading || !profile
-              ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
-              : profile.bio}
-              Self Taught | Full-Stack Developer | FE Specialist
+            {loading || !profile ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' }) : profile.bio}
+            Self Taught | Full-Stack Developer | FE Specialist
           </div>
         </div>
-
       </div>
     </div>
   );

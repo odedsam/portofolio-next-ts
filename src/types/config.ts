@@ -1,3 +1,14 @@
+export type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  href: string;
+  githubMonorepo?: string;
+  githubClientUrl?: string;
+  githubServerUrl?: string;
+  pinned?: boolean;
+  imageUrl?: string;
+};
 export type Config = {
   github: {
     username: string;
@@ -16,12 +27,12 @@ export type Config = {
         };
       };
       manual?: {
-        projects?: any[];
+        projects?: Project[];
       };
     };
     external?: {
       header?: string;
-      projects?: any[];
+      projects?: Project[];
     };
   };
   seo?: {
@@ -54,7 +65,7 @@ export type Config = {
   resume?: {
     fileUrl?: string;
   };
-  skills?: any[];
+  skills?: string[];
   experiences?: {
     company?: string;
     position?: string;
@@ -95,7 +106,7 @@ export type Config = {
     displayAvatarRing?: boolean;
     themes?: string[];
   };
-  footer?: any;
+  footer?: React.ReactNode;
   enablePWA?: boolean;
 };
 
@@ -130,12 +141,12 @@ export type SanitizedConfig = {
         };
       };
       manual: {
-        projects: any[];
+        projects: Project[];
       };
     };
     external: {
       header: string;
-      projects: any[];
+      projects: Project[];
     };
   };
   seo: {
@@ -168,7 +179,7 @@ export type SanitizedConfig = {
   resume: {
     fileUrl: string;
   };
-  skills: any[];
+  skills: string[];
   experiences: {
     company?: string;
     position?: string;
@@ -200,6 +211,6 @@ export type SanitizedConfig = {
     display: boolean;
   };
   themeConfig: SanitizedThemeConfig;
-  footer?: any;
+  footer?: React.ReactNode;
   enablePWA: boolean;
 };

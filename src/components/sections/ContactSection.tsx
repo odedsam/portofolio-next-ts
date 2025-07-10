@@ -11,10 +11,10 @@ export default function ContactSection() {
       <div className="max-w-4xl mx-auto text-center">
         <div className="flex justify-center items-center gap-2 mb-4">
           <MdEmail className="text-3xl text-primary" />
-          <h2 className="text-3xl font-bold text-base-content">Let's Connect</h2>
+          <h2 className="text-3xl font-bold text-base-content">Let&lsquo;s Connect</h2>
         </div>
 
-        <p className="text-base-content/70 mb-10">Have a project in mind, job offer, or just want to say hi? I’d love to hear from you.</p>
+        <p className="text-base-content/70 mb-10">Have a project in mind, job offer, or just want to say hi? I&lsquo;d love to hear from you.</p>
 
         <form
           ref={formRef}

@@ -75,9 +75,7 @@ export default function ProfilePage() {
             displayAvatarRing: true,
             themes: DEFAULT_THEMES,
           },
-          footer: {
-            copyright: '© 2025 Oded Samuel. All rights reserved.',
-          },
+          footer: '© 2025 Oded Samuel. All rights reserved.',
           enablePWA: true,
         }}
       />
