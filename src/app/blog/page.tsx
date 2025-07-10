@@ -35,7 +35,7 @@ export default function BlogPage() {
             <p className="text-muted-foreground mb-3">
               A practical guide to designing and building production-grade APIs using Node.js, TypeScript, and clean architecture.
             </p>
-            <Link href="/blog/scalable-api-nodejs-typescript" className="text-primary hover:underline">
+            <Link href="/blog/scalable-apis-nodejs-typescript" className="text-primary hover:underline">
               Read more →
             </Link>
           </article>
