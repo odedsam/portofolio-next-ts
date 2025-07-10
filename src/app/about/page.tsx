@@ -9,7 +9,7 @@ export default function page() {
 
         <section className="space-y-4 text-base leading-relaxed text-center font-fira font-medium">
           <p>
-            I’m Oded, a dedicated full-stack developer with over 2.5 years of hands-on experience in building fast, scalable, and
+            I’m Oded, a dedicated full-stack developer with over 3.5 years of hands-on experience in building fast, scalable, and
             maintainable web apps. I work exclusively with modern technologies like <strong>TypeScript</strong>,{' '}
             <strong>Vue 3 / Nuxt 3</strong>, <strong>Next.js</strong>, and <strong>NestJS</strong>.
           </p>
