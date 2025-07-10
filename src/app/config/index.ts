@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     tech: ['TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'Zustand', 'TMDB API'],
     href: 'https://aura-stream.vercel.app/',
     githubMonorepo: 'https://github.com/odedsam/stream-vibe',
-    imageUrl: '/thumb/aurastream-catalog.png',
+    imageUrl: '/thumb/aura-stream-browse.png',
     pinned: true,
   },
   {
@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
     tech: ['TypeScript', 'Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'FirebaseDB'],
     href: 'https://estate-app-nuxt3.vercel.app',
     githubMonorepo: 'https://github.com/odedsam/Estate-App-nuxt3',
-    imageUrl: '/thumb/estatein-thumbnail.png',
+    imageUrl: '/thumb/esa-thumb.png',
     pinned: true,
   },
   {
