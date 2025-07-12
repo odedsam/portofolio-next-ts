@@ -1,5 +1,5 @@
 import { MdOpenInNew } from 'react-icons/md';
-import { FALLBACK_IMAGE, ga, skeleton } from '@/config';
+import { ga, skeleton } from '@/config';
 import { SanitizedExternalProject } from '@/types';
 import NextLazyImage from '@/features/partials/NextLazyImage';
 
