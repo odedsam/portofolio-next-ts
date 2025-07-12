@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section className="pl-3 max-w-3xl mx-auto space-y-10">
       <section className="space-y-4 text-sm leading-relaxed font-medium">
-        <h2 className="text-black text-base font-semibold">TypeScript Expert | Problem-Solver</h2>
+        <h2 className="text-base font-semibold">TypeScript Expert | Problem-Solver</h2>
 
         <p>
           I’m Oded, a dedicated full-stack developer with over 3.5 years of hands-on experience in building fast, scalable, and maintainable

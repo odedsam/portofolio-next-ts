@@ -82,31 +82,21 @@ const ExternalProjectCard = ({ externalProjects, header, loading, googleAnalytic
             console.error(error);
           }
         }}>
-        <div className="p-8 h-full w-full">
-          <div className="flex items-center flex-col">
-            <div className="w-full">
-              <div className="px-4">
-                <div className="text-center w-full">
-                  <h2 className="font-medium text-center opacity-60 mb-2">{item.title}</h2>
-                  {item.imageUrl && (
-                    <div className="avatar opacity-90">
-                      <div className="w-full rounded-lg">
-                        <NextLazyImage
-                          src={item.imageUrl}
-                          alt="thumbnail"
-                          width={200}
-                          height={96}
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                          className="w-full h-full object-cover"
-                          blurDataURL={FALLBACK_IMAGE}
-                        />
-                      </div>
-                    </div>
-                  )}
-                  <p className="mt-2 text-base-content text-sm text-justify">{item.description}</p>
-                </div>
+        <div className="flex items-center flex-col">
+          <div className="w-full">
+            {item.imageUrl && (
+              <div className="w-full object-cover rounded-lg">
+                <NextLazyImage
+                  src={item.imageUrl}
+                  alt="thumbnail"
+                  className="w-full min-h-48 max-h-48 object-cover rounded-t-lg"
+                />
               </div>
-            </div>
+            )}
+          </div>
+          <div className="p-4 mt-auto">
+            <h2 className="font-medium text-start text-base opacity-60 mb-2">{item.title}</h2>
+            <p className="mt-2 text-base-content text-sm text-justify">{item.description}</p>
           </div>
         </div>
       </a>
