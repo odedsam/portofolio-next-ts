@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillMediumSquare } from 'react-icons/ai';
 import { CgDribbble } from 'react-icons/cg';
 import type { Profile, SanitizedGithub, SanitizedSocial } from '@/types';
@@ -148,7 +147,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
           {loading || !profile ? (
             renderSkeleton()
           ) : (
-            <Fragment>
+            <>
               {profile.location && <ListItem icon={<MdLocationOn />} title="Based in:" value={profile.location } />}
               {profile.company && (
                 <OrganizationItem
@@ -181,7 +180,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   icon={<FaLinkedin />}
                   title="LinkedIn:"
                   value={social.linkedin}
-                  link={`https://www.linkedin.com/in/${social.linkedin}`}
+                  link={`https://www.linkedin.com/in/${social.linkedin}-18484a338/`}
                 />
               )}
               {social?.dribbble && (
@@ -271,7 +270,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.discord && (
                 <ListItem icon={<RiDiscordFill />} title="Discord:" value={social.discord} link={`https://discord.com/app`} />
               )}
-            </Fragment>
+            </>
           )}
         </div>
       </div>

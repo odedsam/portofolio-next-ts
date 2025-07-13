@@ -7,7 +7,7 @@ import { formatDistance } from 'date-fns';
 import { CustomError, GENERIC_ERROR, INVALID_CONFIG_ERROR, INVALID_GITHUB_USERNAME_ERROR, setTooManyRequestError } from '@/config/errors';
 import { getInitialTheme, getSanitizedConfig, setupHotjar } from '@/config';
 import { BG_COLOR, DEFAULT_THEMES } from '@/config';
-
+import { analyticsConfig } from '@/config/analytics';
 import ThemeChanger from '@/config/theme-changer';
 import SkillCard from '@/components/cards/SkillCard';
 import AvatarCard from '@/components/cards/AvatarCard';
@@ -27,7 +27,6 @@ import ContactSection from './sections/ContactSection';
 
 /**
  * Renders the GitProfile component.
- *
  * @param {Object} config - the configuration object
  * @return {JSX.Element} the rendered GitProfile component
  */
@@ -52,25 +51,19 @@ const GitProfile = ({ config }: { config: Config }) => {
         const query = `user:${sanitizedConfig.github.username}+fork:${!sanitizedConfig.projects.github.automatic.exclude.forks}${excludeRepo}`;
         const url = `https://api.github.com/search/repositories?q=${query}&sort=${sanitizedConfig.projects.github.automatic.sortBy}&per_page=${sanitizedConfig.projects.github.automatic.limit}&type=Repositories`;
 
-        const repoResponse = await axios.get(url, {
-          headers: { 'Content-Type': 'application/vnd.github.v3+json' },
-        });
+        const repoResponse = await axios.get(url, { headers: { 'Content-Type': 'application/vnd.github.v3+json' } });
         const repoData = repoResponse.data;
-
         return repoData.items;
       } else {
         if (sanitizedConfig.projects.github.manual.projects.length === 0) {
           return [];
         }
-        const repos = sanitizedConfig.projects.github.manual.projects.map((project) => `+repo:${project}`).join('');
 
+        const repos = sanitizedConfig.projects.github.manual.projects.map((project) => `+repo:${project}`).join('');
         const url = `https://api.github.com/search/repositories?q=${repos}+fork:true&type=Repositories`;
 
-        const repoResponse = await axios.get(url, {
-          headers: { 'Content-Type': 'application/vnd.github.v3+json' },
-        });
+        const repoResponse = await axios.get(url, { headers: { 'Content-Type': 'application/vnd.github.v3+json' } });
         const repoData = repoResponse.data;
-
         return repoData.items;
       }
     },
@@ -230,7 +223,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                       loading={loading}
                       header={sanitizedConfig.projects.external.header}
                       externalProjects={sanitizedConfig.projects.external.projects}
-                      googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                      googleAnalyticId={analyticsConfig.gaId}
                     />
                   )}
 
@@ -249,7 +242,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                       limit={sanitizedConfig.projects.github.automatic.limit}
                       githubProjects={githubProjects}
                       loading={loading}
-                      googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                      googleAnalyticsId={analyticsConfig.gaId}
                     />
                   )}
                 </div>

@@ -1,14 +1,5 @@
-export type Project = {
-  title: string;
-  description: string;
-  tech: string[];
-  href: string;
-  githubMonorepo?: string;
-  githubClientUrl?: string;
-  githubServerUrl?: string;
-  pinned?: boolean;
-  imageUrl?: string;
-};
+import type { Project } from ".";
+
 export type Config = {
   github: {
     username: string;
@@ -87,6 +78,9 @@ export type Config = {
     title?: string;
   }[];
   googleAnalytics?: {
+    id?: string;
+  };
+   clarity?: {
     id?: string;
   };
   hotjar?: {
@@ -200,7 +194,10 @@ export type SanitizedConfig = {
   publications: {
     title?: string;
   }[];
-  googleAnalytics: {
+   googleAnalytics?: {
+    id?: string;
+  };
+   clarity?: {
     id?: string;
   };
   hotjar: SanitizedHotjar;

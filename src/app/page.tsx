@@ -1,9 +1,8 @@
 'use client';
 
-import GitProfile from '@/components/GitProfile';
-import { SKILLS } from '@/config';
 import { DEFAULT_THEMES } from '@/config/themes';
-import { PROJECTS } from './config';
+import { SKILLS, PROJECTS } from '@/config';
+import GitProfile from '@/components/GitProfile';
 
 export default function ProfilePage() {
   return (
@@ -37,12 +36,12 @@ export default function ProfilePage() {
           },
 
           seo: {
-            title: 'Oded Samuel | Full-Stack Developer',
+            title: 'Portfolio of Oded Samuel',
             description: 'Portfolio, GitHub and Blog',
             imageURL: '/og.jpg',
           },
           social: {
-            linkedin: 'http://bit.ly/4dwJ1Q9',
+            linkedin: 'oded-samuel',
             x: 'odedsamuel',
             email: 'oded970@gmail.com',
             website: 'https://coded-solution.com',

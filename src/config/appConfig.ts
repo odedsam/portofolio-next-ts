@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+
 import { IBM_Plex_Mono, Fira_Code, JetBrains_Mono } from 'next/font/google';
 
 export const ibmPlexMono = IBM_Plex_Mono({
@@ -21,7 +21,3 @@ export const jetBrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-export const appMetaData: Metadata = {
-  title: 'Portofolio of Oded Samuel',
-  description: 'Full Stack Developer',
-};

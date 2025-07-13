@@ -1,10 +1,10 @@
-import React from 'react';
+import type { AppError } from '@/types';
 import { hotjar } from 'react-hotjar';
 import { LOCAL_STORAGE_KEY_NAME } from '@/config';
 import { DEFAULT_THEMES } from '@/config/themes';
 import { SanitizedConfig, SanitizedHotjar, SanitizedThemeConfig, Config } from '@/types/config';
-import type { AppError } from '@/types';
 import colors from '@/config/colors.json';
+import React from 'react';
 
 export const isDarkishTheme = (appliedTheme: string): boolean => {
   return ['dark', 'halloween', 'forest', 'black', 'luxury', 'dracula'].includes(appliedTheme);
@@ -89,6 +89,9 @@ export const getSanitizedConfig = (config: Config): SanitizedConfig | Record<str
       hotjar: {
         id: config?.hotjar?.id,
         snippetVersion: config?.hotjar?.snippetVersion || 6,
+      },
+      clarity:{
+      id:config?.clarity?.id,
       },
       blog: {
         username: config?.blog?.username || '',
@@ -185,3 +188,5 @@ export const getLanguageColor = (language: string): string => {
     return 'gray';
   }
 };
+
+
