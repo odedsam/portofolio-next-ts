@@ -97,7 +97,7 @@ export const getSanitizedConfig = (config: Config): SanitizedConfig | Record<str
         display: !!config?.blog?.username && !!config?.blog?.source,
       },
       themeConfig: {
-        defaultTheme: config?.themeConfig?.defaultTheme || DEFAULT_THEMES[0],
+        defaultTheme: config?.themeConfig?.defaultTheme || DEFAULT_THEMES[19],
         disableSwitch: config?.themeConfig?.disableSwitch || false,
         respectPrefersColorScheme: config?.themeConfig?.respectPrefersColorScheme || false,
         displayAvatarRing: config?.themeConfig?.displayAvatarRing ?? true,

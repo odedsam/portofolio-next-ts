@@ -42,10 +42,10 @@ export default function ProfilePage() {
             imageURL: '/og.jpg',
           },
           social: {
-            linkedin: 'https://linkedin.com/in/odedsamuel',
+            linkedin: 'oded-samuel',
             x: 'odedsamuel',
             email: 'oded970@gmail.com',
-            website: 'https://oded-portofolio.vercel.app/',
+            website: 'https://oded-portofolio.vercel.app',
           },
           resume: {
             fileUrl: '/resume.pdf',
@@ -69,7 +69,7 @@ export default function ProfilePage() {
             display: true,
           },
           themeConfig: {
-            defaultTheme: DEFAULT_THEMES[0],
+            defaultTheme: DEFAULT_THEMES[19],
             disableSwitch: false,
             respectPrefersColorScheme: true,
             displayAvatarRing: true,
