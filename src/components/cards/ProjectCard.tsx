@@ -1,8 +1,18 @@
-import type { Project } from '@/types';
 import { ExternalLink, Pin } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 
+export type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  href: string;
+  githubMonorepo?: string;
+  githubClientUrl?: string;
+  githubServerUrl?: string;
+  pinned?: boolean;
+  imageUrl?:string;
+};
 
 type GithubLinksType = {
   clientUrl?: string;
@@ -60,7 +70,11 @@ export default function ProjectCard({ projects }: Props) {
             <Link href={project.href} target="_blank" className="inline-flex items-center gap-1 text-sm text-primary hover:underline">
               Live <ExternalLink className="w-4 h-4" />
             </Link>
-            <GithubLinks clientUrl={project.githubClientUrl} serverUrl={project.githubServerUrl} monorepoUrl={project.githubMonorepo} />
+            <GithubLinks
+              clientUrl={project.githubClientUrl}
+              serverUrl={project.githubServerUrl}
+              monorepoUrl={project.githubMonorepo}
+            />
           </div>
         </div>
       ))}

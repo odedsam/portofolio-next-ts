@@ -1,8 +1,9 @@
 'use client';
 
-import { DEFAULT_THEMES } from '@/config/themes';
-import { SKILLS, PROJECTS } from '@/config';
 import GitProfile from '@/components/GitProfile';
+import { SKILLS } from '@/config';
+import { DEFAULT_THEMES } from '@/config/themes';
+import { PROJECTS } from './config';
 
 export default function ProfilePage() {
   return (
@@ -19,7 +20,7 @@ export default function ProfilePage() {
               mode: 'automatic',
               automatic: {
                 sortBy: 'stars',
-                limit: 15,
+                limit: 20,
                 exclude: {
                   forks: true,
                   projects: [],
@@ -36,15 +37,15 @@ export default function ProfilePage() {
           },
 
           seo: {
-            title: 'Portfolio of Oded Samuel',
+            title: 'Oded Samuel | Full-Stack Developer',
             description: 'Portfolio, GitHub and Blog',
             imageURL: '/og.jpg',
           },
           social: {
-            linkedin: 'oded-samuel',
+            linkedin: 'https://linkedin.com/in/odedsamuel',
             x: 'odedsamuel',
             email: 'oded970@gmail.com',
-            website: 'https://coded-solution.com',
+            website: 'https://oded-portofolio.vercel.app/',
           },
           resume: {
             fileUrl: '/resume.pdf',
