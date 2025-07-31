@@ -22,7 +22,6 @@
 
 # production
 /build
-./src/config/git.ts
 # misc
 .DS_Store
 *.pem
