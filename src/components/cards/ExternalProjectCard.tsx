@@ -1,6 +1,7 @@
 import { MdOpenInNew } from 'react-icons/md';
 import { ga, skeleton } from '@/config';
 import { SanitizedExternalProject } from '@/types';
+import { Link } from 'lucide-react';
 import NextLazyImage from '@/features/partials/NextLazyImage';
 
 type Props = {
@@ -86,17 +87,16 @@ const ExternalProjectCard = ({ externalProjects, header, loading, googleAnalytic
           <div className="w-full">
             {item.imageUrl && (
               <div className="w-full object-cover rounded-lg">
-                <NextLazyImage
-                  src={item.imageUrl}
-                  alt="thumbnail"
-                  className="w-full min-h-48 max-h-48 object-cover rounded-t-lg"
-                />
+                <NextLazyImage src={item.imageUrl} alt="thumbnail" className="w-full min-h-48 max-h-48 object-cover rounded-t-lg" />
               </div>
             )}
           </div>
           <div className="p-4 mt-auto">
-            <h2 className="font-medium text-start text-base opacity-60 mb-2">{item.title}</h2>
-            <p className="mt-2 text-base-content text-sm text-justify">{item.description}</p>
+            <div className="flex gap-3">
+              <Link />
+              <h2 className="font-medium text-start text-base opacity-60 mb-2">{item.title}</h2>
+            </div>
+            <p className="mt-2 text-base-content text-sm ">{item.description}</p>
           </div>
         </div>
       </a>

@@ -25,6 +25,8 @@ const ThemeChanger = ({
   loading: boolean;
   themeConfig: SanitizedThemeConfig;
 }) => {
+
+
   const changeTheme = (e: MouseEvent<HTMLAnchorElement>, selectedTheme: string) => {
     e.preventDefault();
 

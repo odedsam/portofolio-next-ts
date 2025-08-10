@@ -1,7 +1,6 @@
-import { Fragment } from 'react';
+import type { Profile, SanitizedGithub, SanitizedSocial } from '@/types';
 import { AiFillGithub, AiFillInstagram, AiFillMediumSquare } from 'react-icons/ai';
 import { CgDribbble } from 'react-icons/cg';
-import type { Profile, SanitizedGithub, SanitizedSocial } from '@/types';
 import {
   FaBehanceSquare,
   FaBuilding,
@@ -148,8 +147,8 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
           {loading || !profile ? (
             renderSkeleton()
           ) : (
-            <Fragment>
-              {profile.location && <ListItem icon={<MdLocationOn />} title="Based in:" value={profile.location } />}
+            <>
+              {profile.location && <ListItem icon={<MdLocationOn />} title="Based in:" value={profile.location} />}
               {profile.company && (
                 <OrganizationItem
                   icon={<FaBuilding />}
@@ -271,7 +270,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.discord && (
                 <ListItem icon={<RiDiscordFill />} title="Discord:" value={social.discord} link={`https://discord.com/app`} />
               )}
-            </Fragment>
+            </>
           )}
         </div>
       </div>
