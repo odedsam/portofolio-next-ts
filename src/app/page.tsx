@@ -1,9 +1,9 @@
 'use client';
 
-import GitProfile from '@/components/GitProfile';
 import { SKILLS } from '@/config';
 import { DEFAULT_THEMES } from '@/config/themes';
 import { PROJECTS } from './config';
+import GitProfile from '@/components/GitProfile';
 
 export default function ProfilePage() {
   return (

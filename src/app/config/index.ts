@@ -51,6 +51,16 @@ export const PROJECTS: Project[] = [
     imageUrl: '/thumb/explore-moon-thumbnail.webp',
     githubMonorepo: 'https://github.com/odedsam/explore-moon',
   },
+  {
+    title: 'Virtual Library',
+    description:
+      'Developed an advanced web application for Browse and managing books, leveraging an open-source book API. The app enables users to search, and view detailed information about books, providing a smooth and intuitive user experience.',
+    tech: ['TypeScript', 'Next.js', 'PostgreSQL', 'Prisma', 'Zustand', 'Open Library API'],
+    href: 'https://virtual-libary-rho.vercel.app/',
+    githubMonorepo: 'https://github.com/odedsam/virtual-libary',
+    imageUrl: '/thumb/virtual-libary-thumbnail.webp',
+    pinned: true,
+  },
 
   {
     title: 'Pierced',

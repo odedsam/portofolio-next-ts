@@ -209,7 +209,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                       }))}
                     />
                   )}
-                  <GenCard loading={loading} className='max-lg:block lg:hidden'>
+                  <GenCard loading={loading} className="max-lg:block lg:hidden">
                     {/* My Projects  */}
                     {sanitizedConfig.projects.external.projects.length !== 0 && (
                       <ExternalProjectCard
@@ -236,14 +236,16 @@ const GitProfile = ({ config }: { config: Config }) => {
               </div>
               <div className="lg:col-span-2 col-span-1">
                 <div className="grid grid-cols-1 gap-6">
-                  {sanitizedConfig.projects.external.projects.length !== 0 && (
-                    <ExternalProjectCard
-                      loading={loading}
-                      header={sanitizedConfig.projects.external.header}
-                      externalProjects={sanitizedConfig.projects.external.projects}
-                      googleAnalyticId={sanitizedConfig.googleAnalytics.id}
-                    />
-                  )}
+                  <div className="max-lg:hidden">
+                    {sanitizedConfig.projects.external.projects.length !== 0 && (
+                      <ExternalProjectCard
+                        loading={loading}
+                        header={sanitizedConfig.projects.external.header}
+                        externalProjects={sanitizedConfig.projects.external.projects}
+                        googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                      />
+                    )}
+                  </div>
 
                   {sanitizedConfig.publications.length !== 0 && (
                     <PublicationCard
