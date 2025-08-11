@@ -24,6 +24,7 @@ import GenCard from '@/components/cards/GenCard';
 import BlogSection from './sections/BlogSection';
 import AboutSection from './sections/AboutSection';
 import ContactSection from './sections/ContactSection';
+import AppFooter from './sections/AppFooter';
 
 /**
  * Renders the GitProfile component.
@@ -209,6 +210,17 @@ const GitProfile = ({ config }: { config: Config }) => {
                       }))}
                     />
                   )}
+                  <GenCard loading={loading} className='max-lg:block lg:hidden'>
+                    {/* My Projects  */}
+                    {sanitizedConfig.projects.external.projects.length !== 0 && (
+                      <ExternalProjectCard
+                        loading={loading}
+                        header={sanitizedConfig.projects.external.header}
+                        externalProjects={sanitizedConfig.projects.external.projects}
+                        googleAnalyticId={sanitizedConfig.googleAnalytics.id}
+                      />
+                    )}
+                  </GenCard>
                   <GenCard loading={loading} title={'Blogs'}>
                     <BlogSection />{' '}
                   </GenCard>
@@ -256,13 +268,7 @@ const GitProfile = ({ config }: { config: Config }) => {
               </div>
             </div>
           </div>
-          {sanitizedConfig.footer && (
-            <footer className={`p-4 footer ${BG_COLOR} text-base-content footer-center`}>
-              <div className="card card-sm bg-base-100 shadow-sm">
-                <Footer loading={loading} />
-              </div>
-            </footer>
-          )}
+          {sanitizedConfig.footer && <AppFooter loading={loading} />}
         </>
       )}
     </div>

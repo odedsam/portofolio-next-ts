@@ -32,7 +32,8 @@ export interface SanitizedExternalProject {
   description?: string;
   imageUrl?: string;
   link?: string;
-  href?:string;
+  href?: string;
+  tech?: string;
 }
 
 export interface SanitizedExternalProjects {
@@ -169,7 +170,6 @@ export interface Article {
   description: string;
   categories: string[];
 }
-
 
 export type AppError = unknown & {
   message?: string;

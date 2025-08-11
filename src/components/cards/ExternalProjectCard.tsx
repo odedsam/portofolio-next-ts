@@ -67,7 +67,7 @@ const ExternalProjectCard = ({ externalProjects, header, loading, googleAnalytic
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => (
       <a
-        className="card shadow-md card-sm bg-base-100 cursor-pointer"
+        className="mb-auto lg:min-h-[26rem] lg:max-h-[26rem] card shadow-md card-sm bg-base-100 cursor-pointer"
         key={index}
         href={item.link || item.href}
         target="_blank"
@@ -84,21 +84,27 @@ const ExternalProjectCard = ({ externalProjects, header, loading, googleAnalytic
           }
         }}>
         <div className="flex items-center flex-col">
-          <div className="w-full">
+          <div className="w-full mb-auto">
             {item.imageUrl && (
               <div className="w-full object-cover rounded-lg">
-                <NextLazyImage src={item.imageUrl} alt="thumbnail" className="w-full min-h-48 max-h-48 object-cover rounded-t-lg" />
+                <NextLazyImage
+                  src={item.imageUrl}
+                  alt="thumbnail"
+                  priority={index === 0}
+                  className="w-full min-h-48 max-h-48 object-cover rounded-t-lg"
+                />
               </div>
             )}
           </div>
           <div className="p-4 mt-auto">
             <div className="flex gap-3">
-              <Link />
+              <Link className="size-5 md:size-6" />
               <h2 className="font-medium text-start text-base opacity-60 mb-2">{item.title}</h2>
             </div>
-            <p className="mt-2 text-base-content text-sm ">{item.description}</p>
+            <p className="mt-2 text-base-content text-sm">{item.description}</p>
           </div>
         </div>
+        {/* {item.tech && <span className="text-[10px] sm:text-xs bg-muted text-foreground px-2 py-0.5 rounded-md">{item.tech}</span>} */}
       </a>
     ));
   };

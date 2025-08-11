@@ -1,8 +1,9 @@
 'use client';
 
+import type { ImageProps } from 'next/image';
 import { useState } from 'react';
-import Image, { ImageProps } from 'next/image';
 import { FALLBACK_IMAGE } from '@/config';
+import Image from 'next/image';
 
 type LazyImageProps = {
   src: string;

@@ -1,14 +1,16 @@
 import { skeleton } from '@/config';
+import { cn } from '@/lib/utils';
 
 type Props = {
   loading: boolean;
   children?: React.ReactNode;
   title?: string;
+  className?: string;
 };
 
-const GenCard = ({ loading, title, children }: Props) => {
+const GenCard = ({ className, loading, title, children }: Props) => {
   return (
-    <div className="card shadow-lg card-sm bg-base-100">
+    <div className={cn('card shadow-lg card-sm bg-base-100', className)}>
       <div className="card-body">
         <div className="mx-3">
           <h5 className="card-title">
