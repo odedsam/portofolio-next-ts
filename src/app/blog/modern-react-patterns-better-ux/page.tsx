@@ -1,6 +1,6 @@
-// app/blog/modern-react-patterns-better-ux/page.tsx
 import BackToHome from '@/components/BackToHome';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Modern React Patterns for Better UX | Your Name',
@@ -17,9 +17,11 @@ export const metadata: Metadata = {
 
 export default function ModernReactPatternsPost() {
   return (
-
     <article className="max-w-4xl mx-auto px-6 py-12">
-     <div className='py-8'> <BackToHome /></div>
+      <div className="py-8">
+        {' '}
+        <BackToHome />
+      </div>
       <header className="mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Modern React Patterns for Better UX</h1>
         <div className="flex items-center gap-4 text-gray-600 mb-6">
@@ -30,8 +32,8 @@ export default function ModernReactPatternsPost() {
           <span>Frontend Development</span>
         </div>
         <p className="text-xl text-gray-700 leading-relaxed">
-          Creating delightful user experiences goes beyond making things look pretty. It&lsquo;s about understanding user behavior, optimizing
-          performance, and implementing patterns that make your app feel fast and responsive.
+          Creating delightful user experiences goes beyond making things look pretty. It&lsquo;s about understanding user behavior,
+          optimizing performance, and implementing patterns that make your app feel fast and responsive.
         </p>
       </header>
 
@@ -105,7 +107,8 @@ const ArticleCard = ({ articleId }: { articleId: string }) => {
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Smart Data Fetching with SWR</h2>
         <p className="text-gray-700 mb-4">
-          SWR (Stale-While-Revalidate) provides excellent caching and revalidation strategies. Here&lsquo;s how I implement it for optimal UX:
+          SWR (Stale-While-Revalidate) provides excellent caching and revalidation strategies. Here&lsquo;s how I implement it for optimal
+          UX:
         </p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
@@ -453,17 +456,20 @@ const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => (
         </div>
 
         <p className="text-gray-700 mt-8">
-          Modern React development is about creating experiences that feel native and responsive. By implementing these patterns, you&lsquo;ll
-          build applications that not only work well but also delight your users with smooth, intuitive interactions.
+          Modern React development is about creating experiences that feel native and responsive. By implementing these patterns,
+          you&lsquo;ll build applications that not only work well but also delight your users with smooth, intuitive interactions.
         </p>
       </div>
 
       <footer className="mt-12 pt-8 border-t border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+            <div className="w-12 h-12 bg-gray-300 rounded-full relative overflow-hidden">
+              <Image src="/user-avatar.webp" alt="user-avatar" fill className="rounded-full object-cover" priority />
+            </div>
+
             <div>
-              <p className="font-semibold text-gray-900">Your Name</p>
+              <p className="font-semibold text-gray-900">Oded Samuel</p>
               <p className="text-gray-600">Full Stack Developer</p>
             </div>
           </div>

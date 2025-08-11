@@ -1,5 +1,6 @@
-import BackToHome from '@/components/BackToHome';
 import { Metadata } from 'next';
+import BackToHome from '@/components/BackToHome';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'From Monolith to Microservices: A Real-World Journey | Your Name',
@@ -59,8 +60,8 @@ export default function MicroservicesJourneyPost() {
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Planning the Migration Strategy</h2>
         <p className="text-gray-700 mb-4">
-          We adopted the &quot;Strangler Fig&quot; pattern, gradually replacing parts of the monolith with microservices. Here&lsquo;s how we
-          approached the planning:
+          We adopted the &quot;Strangler Fig&quot; pattern, gradually replacing parts of the monolith with microservices. Here&lsquo;s how
+          we approached the planning:
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">1. Domain-Driven Design</h3>
@@ -553,8 +554,8 @@ class UserRepository {
         </div>
 
         <p className="text-gray-700 mt-8">
-          The journey from monolith to microservices is challenging but rewarding. It&lsquo;s not just a technical transformation—it&lsquo;s an
-          organizational one. The key is to approach it methodically, learn from each step, and be prepared to adapt your strategy as you
+          The journey from monolith to microservices is challenging but rewarding. It&lsquo;s not just a technical transformation—it&lsquo;s
+          an organizational one. The key is to approach it methodically, learn from each step, and be prepared to adapt your strategy as you
           go.
         </p>
       </div>
@@ -562,9 +563,12 @@ class UserRepository {
       <footer className="mt-12 pt-8 border-t border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+            <div className="w-12 h-12 bg-gray-300 rounded-full relative overflow-hidden">
+              <Image src="/user-avatar.webp" alt="user-avatar" fill className="rounded-full object-cover" priority />
+            </div>
+
             <div>
-              <p className="font-semibold text-gray-900">Your Name</p>
+              <p className="font-semibold text-gray-900">Oded Samuel</p>
               <p className="text-gray-600">Full Stack Developer</p>
             </div>
           </div>

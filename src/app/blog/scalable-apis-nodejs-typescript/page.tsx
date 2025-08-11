@@ -1,4 +1,5 @@
 import BackToHome from '@/components/BackToHome';
+import Image from 'next/image';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -31,16 +32,16 @@ export default function ScalableAPIsPost() {
           <span>Backend Development</span>
         </div>
         <p className="text-xl text-gray-700 leading-relaxed">
-          After 3.5 years of building production APIs, I&lsquo;ve learned that scalability isn&lsquo;t just about handling more requests—it&lsquo;s about
-          creating maintainable, robust systems that can evolve with your business needs.
+          After 3.5 years of building production APIs, I&lsquo;ve learned that scalability isn&lsquo;t just about handling more
+          requests—it&lsquo;s about creating maintainable, robust systems that can evolve with your business needs.
         </p>
       </header>
 
       <div className="prose prose-lg max-w-none">
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">The Foundation: TypeScript + Express</h2>
         <p className="text-gray-700 mb-6">
-          Starting with a solid foundation is crucial. TypeScript provides the type safety that becomes invaluable as your API grows. Here&lsquo;s
-          how I structure my Node.js APIs for maximum scalability:
+          Starting with a solid foundation is crucial. TypeScript provides the type safety that becomes invaluable as your API grows.
+          Here&lsquo;s how I structure my Node.js APIs for maximum scalability:
         </p>
 
         <div className="bg-gray-50 rounded-lg p-6 mb-6">
@@ -230,9 +231,12 @@ export const errorHandler = (
       <footer className="mt-12 pt-8 border-t border-gray-200">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+            <div className="w-12 h-12 bg-gray-300 rounded-full relative overflow-hidden">
+              <Image src="/user-avatar.webp" alt="user-avatar" fill className="rounded-full object-cover" priority />
+            </div>
+
             <div>
-              <p className="font-semibold text-gray-900">Your Name</p>
+              <p className="font-semibold text-gray-900">Oded Samuel</p>
               <p className="text-gray-600">Full Stack Developer</p>
             </div>
           </div>
