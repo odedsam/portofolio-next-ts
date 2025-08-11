@@ -19,7 +19,6 @@ import ErrorPage from '@/components/ErrorPage';
 
 import GithubProjectCard from '@/components/cards/GithubProjectCard';
 import ExternalProjectCard from '@/components/cards/ExternalProjectCard';
-import Footer from '@/components/Footer';
 import GenCard from '@/components/cards/GenCard';
 import BlogSection from './sections/BlogSection';
 import AboutSection from './sections/AboutSection';

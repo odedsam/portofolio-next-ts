@@ -33,7 +33,7 @@ export interface SanitizedExternalProject {
   imageUrl?: string;
   link?: string;
   href?: string;
-  tech?: string;
+  // tech?: string;
 }
 
 export interface SanitizedExternalProjects {
