@@ -14,7 +14,7 @@ export const PROJECTS: Project[] = [
   {
     title: 'RealtimeCollab',
     description:
-      'RealtimeCollab is a robust collaborative platform enabling seamless live interaction with instant updates. Built for scalability and responsiveness, it leverages WebSockets for real-time data sync, delivering smooth, low-latency UX for team collaboration and communication.',
+      'RealtimeCollab is a robust collaborative platform enabling seamless live interactions, Built for scalability and responsiveness, it leverages WebSockets for real-time data sync, delivering smooth, low-latency UX for team collaboration and communication.',
     tech: ['Next.js', 'TypeScript', 'Express.js', 'WebSockets', 'Prisma', 'PostgreSQL'],
     href: 'https://realtime-collab-next-ts.vercel.app',
     imageUrl: '/thumb/realtime-thumbnail.webp',

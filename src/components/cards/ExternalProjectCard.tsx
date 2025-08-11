@@ -97,7 +97,7 @@ const ExternalProjectCard = ({ externalProjects, header, loading, googleAnalytic
             )}
           </div>
           <div className="p-4 mt-auto">
-            <div className="flex gap-3">
+            <div className="flex justify-start items-start gap-3">
               <Link className="size-5 md:size-6" />
               <h2 className="font-medium text-start text-base opacity-60 mb-2">{item.title}</h2>
             </div>
