@@ -12,11 +12,11 @@ import Image from 'next/image';
 import CodeBlock from '@/components/cards/CodeBlock';
 
 export const metadata: Metadata = {
-  title: 'From Monolith to Microservices: A Real-World Journey | Your Name',
+  title: 'From Monolith to Microservices: A Real-World Journey | Oded Samuel',
   description:
     'Learn from my experience migrating a monolithic application to microservices architecture, including challenges, solutions, and lessons learned.',
   keywords: ['Microservices', 'Architecture', 'DevOps', 'Scalability', 'Migration'],
-  authors: [{ name: 'Your Name' }],
+  authors: [{ name: 'Oded Samuel' }],
   openGraph: {
     title: 'From Monolith to Microservices: A Real-World Journey',
     description:
@@ -94,10 +94,7 @@ export default function MicroservicesJourneyPost() {
               <p className="text-gray-600">Full Stack Developer</p>
             </div>
           </div>
-          <div className="flex gap-4">
-            <button className="text-blue-600 hover:text-blue-800 font-medium">Share</button>
-            <button className="text-gray-600 hover:text-gray-800 font-medium">Save</button>
-          </div>
+
         </div>
       </footer>
     </article>

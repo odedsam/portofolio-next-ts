@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import BackToHome from '@/components/BackToHome';
 import Image from 'next/image';
-import React from 'react';
 import CodeBlock from '../../../components/cards/CodeBlock';
 import {
   optimisticUpdates,
@@ -15,10 +14,10 @@ import {
 } from '@/data/blogs/modernReact';
 
 export const metadata: Metadata = {
-  title: 'Modern React Patterns for Better UX | Your Name',
+  title: 'Modern React Patterns for Better UX | Oded Samuel',
   description: 'Discover advanced React patterns and techniques to create smooth, performant user experiences that delight your users.',
   keywords: ['React', 'Frontend', 'UX', 'Performance', 'JavaScript'],
-  authors: [{ name: 'Your Name' }],
+  authors: [{ name: 'Oded Samuel' }],
   openGraph: {
     title: 'Modern React Patterns for Better UX',
     description: 'Discover advanced React patterns and techniques to create smooth, performant user experiences that delight your users.',
@@ -105,10 +104,7 @@ export default function ModernReactPatternsPost() {
               <p className="text-gray-600">Full Stack Developer</p>
             </div>
           </div>
-          <div className="flex gap-4">
-            <button className="text-blue-600 hover:text-blue-800 font-medium">Share</button>
-            <button className="text-gray-600 hover:text-gray-800 font-medium">Save</button>
-          </div>
+
         </div>
       </footer>
     </article>

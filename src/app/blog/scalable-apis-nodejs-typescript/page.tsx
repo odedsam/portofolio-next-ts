@@ -11,7 +11,7 @@ import Image from 'next/image';
 import CodeBlock from '@/components/cards/CodeBlock';
 
 export const metadata: Metadata = {
-  title: 'Building Scalable APIs with Node.js and TypeScript | Your Name',
+  title: 'Building Scalable APIs with Node.js and TypeScript | Oded Samuel',
   description: 'Learn how to build production-ready, scalable APIs using Node.js, TypeScript, and modern architectural patterns.',
   keywords: ['Node.js', 'TypeScript', 'API', 'Backend', 'Scalability'],
   authors: [{ name: 'Oded Samuel' }],
@@ -151,10 +151,7 @@ export default function ScalableAPIsPost() {
               <p className="text-gray-600">Full Stack Developer</p>
             </div>
           </div>
-          <div className="flex gap-4">
-            <button className="text-blue-600 hover:text-blue-800 font-medium">Share</button>
-            <button className="text-gray-600 hover:text-gray-800 font-medium">Save</button>
-          </div>
+
         </div>
       </footer>
     </article>
