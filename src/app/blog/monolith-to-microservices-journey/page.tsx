@@ -1,4 +1,12 @@
 import { Metadata } from 'next';
+import {
+  dataMigrationCode,
+  ciCdPipeline,
+  dataGatewayPatternCode,
+  eventDrivenArchitectureCode,
+  distributedTracingCode,
+  dockerKubernetesCode,
+} from '@/data/blogs/microServices';
 import BackToHome from '@/components/BackToHome';
 import Image from 'next/image';
 

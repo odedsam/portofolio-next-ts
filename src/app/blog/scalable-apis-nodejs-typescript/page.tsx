@@ -1,12 +1,16 @@
+import { Metadata } from 'next';
+import { userControllerTestCode, dependencyInjectionCode, repositoryPatternCode, cachingLayerCode, errorLoggingCode } from '@/data/blogs/scalable';
 import BackToHome from '@/components/BackToHome';
 import Image from 'next/image';
-import { Metadata } from 'next';
+import CodeBlock from '@/components/cards/CodeBlock';
+
+
 
 export const metadata: Metadata = {
   title: 'Building Scalable APIs with Node.js and TypeScript | Your Name',
   description: 'Learn how to build production-ready, scalable APIs using Node.js, TypeScript, and modern architectural patterns.',
   keywords: ['Node.js', 'TypeScript', 'API', 'Backend', 'Scalability'],
-  authors: [{ name: 'Your Name' }],
+  authors: [{ name: 'Oded Samuel' }],
   openGraph: {
     title: 'Building Scalable APIs with Node.js and TypeScript',
     description: 'Learn how to build production-ready, scalable APIs using Node.js, TypeScript, and modern architectural patterns.',
@@ -19,7 +23,6 @@ export default function ScalableAPIsPost() {
   return (
     <article className="max-w-4xl mx-auto px-6 py-12">
       <div className="py-8">
-        {' '}
         <BackToHome />
       </div>
       <header className="mb-12">
@@ -44,69 +47,26 @@ export default function ScalableAPIsPost() {
           Here&lsquo;s how I structure my Node.js APIs for maximum scalability:
         </p>
 
-        <div className="bg-gray-50 rounded-lg p-6 mb-6">
-          <h3 className="text-lg font-semibold mb-3">Project Structure</h3>
-          <pre className="text-sm text-gray-800 overflow-x-auto">
-            {`src/
-├── controllers/     # Request handlers
-├── services/       # Business logic
-├── models/         # Data models
-├── middleware/     # Custom middleware
-├── routes/         # Route definitions
-├── utils/          # Helper functions
-├── types/          # TypeScript types
-└── config/         # Configuration files`}
-          </pre>
-        </div>
+
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Key Architectural Patterns</h2>
-
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">1. Dependency Injection</h3>
         <p className="text-gray-700 mb-4">
           Using dependency injection makes your code more testable and maintainable. I typically use a simple container pattern:
         </p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
-          <pre className="text-sm">
-            {`// container.ts
-export class Container {
-  private services = new Map();
+          <CodeBlock code={dependencyInjectionCode} language="typescript" showLineNumbers className="shadow-lg />
 
-  register<T>(token: string, factory: () => T): void {
-    this.services.set(token, factory);
-  }
-
-  resolve<T>(token: string): T {
-    const factory = this.services.get(token);
-    if (!factory) throw new Error(\`Service \${token} not found\`);
-    return factory();
-  }
-}`}
-          </pre>
         </div>
 
-        <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">2. Repository Pattern</h3>
+        <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3"> 2. Repository Pattern </h3>
         <p className="text-gray-700 mb-4">
           Abstracting data access through repositories makes your code database-agnostic and easier to test:
         </p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
-          <pre className="text-sm">
-            {`interface UserRepository {
-  findById(id: string): Promise<User | null>;
-  create(userData: CreateUserDto): Promise<User>;
-  update(id: string, userData: UpdateUserDto): Promise<User>;
-  delete(id: string): Promise<void>;
-}
-
-class MongoUserRepository implements UserRepository {
-  // MongoDB implementation
-}
-
-class PostgresUserRepository implements UserRepository {
-  // PostgreSQL implementation
-}`}
-          </pre>
+             <CodeBlock code={repositoryPatternCode} language="typescript" showLineNumbers className="shadow-lg />
         </div>
 
         <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Performance Optimization Strategies</h2>
@@ -117,27 +77,7 @@ class PostgresUserRepository implements UserRepository {
         </p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
-          <pre className="text-sm">
-            {`class CacheService {
-  private redis: Redis;
-
-  async get<T>(key: string): Promise<T | null> {
-    const cached = await this.redis.get(key);
-    return cached ? JSON.parse(cached) : null;
-  }
-
-  async set(key: string, value: any, ttl: number = 3600): Promise<void> {
-    await this.redis.setex(key, ttl, JSON.stringify(value));
-  }
-
-  async invalidate(pattern: string): Promise<void> {
-    const keys = await this.redis.keys(pattern);
-    if (keys.length > 0) {
-      await this.redis.del(...keys);
-    }
-  }
-}`}
-          </pre>
+        <CodeBlock code={cachingLayerCode} language="typescript" showLineNumbers className="shadow-lg" />
         </div>
 
         <h3 className="text-xl font-semibold text-gray-900 mt-6 mb-3">Database Optimization</h3>
@@ -150,32 +90,10 @@ class PostgresUserRepository implements UserRepository {
         <p className="text-gray-700 mb-4">Centralized error handling and structured logging are crucial for debugging production issues:</p>
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
-          <pre className="text-sm">
-            {`// Global error handler middleware
-export const errorHandler = (
-  err: Error,
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  logger.error('API Error', {
-    message: err.message,
-    stack: err.stack,
-    url: req.url,
-    method: req.method,
-    userId: req.user?.id
-  });
-
-  res.status(500).json({
-    success: false,
-    message: 'Internal server error',
-    ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
-  });
-};`}
-          </pre>
+          <CodeBlock code={errorLoggingCode} language="typescript" showLineNumbers className="shadow-lg />
         </div>
 
-        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">Testing Strategy</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4> Testing Strategy </h2>
         <p className="text-gray-700 mb-4">
           A comprehensive testing strategy includes unit tests, integration tests, and end-to-end tests. I use Jest for unit testing and
           Supertest for API testing:
@@ -183,25 +101,7 @@ export const errorHandler = (
 
         <div className="bg-gray-900 text-gray-100 rounded-lg p-4 mb-6 overflow-x-auto">
           <pre className="text-sm">
-            {`describe('UserController', () => {
-  let userService: jest.Mocked<UserService>;
-  let userController: UserController;
-
-  beforeEach(() => {
-    userService = mockUserService();
-    userController = new UserController(userService);
-  });
-
-  it('should create user successfully', async () => {
-    const userData = { name: 'John Doe', email: 'john@example.com' };
-    userService.create.mockResolvedValue(mockUser);
-
-    const result = await userController.createUser(userData);
-
-    expect(result).toEqual(mockUser);
-    expect(userService.create).toHaveBeenCalledWith(userData);
-  });
-});`}
+            <CodeBlock code={userControllerTestCode} language="typescript" showLineNumbers className="shadow-lg" />
           </pre>
         </div>
 
