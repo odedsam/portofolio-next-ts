@@ -22,16 +22,6 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    title: 'Noad',
-    description:
-      'sleek platform for a future-forward techwear company. Includes dynamic product displays, micro-animations, and smooth UX flows. Designed to merge fashion innovation with digital elegance',
-    tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
-    href: 'https://noad.vercel.app',
-    imageUrl: '/thumb/noad-thumbnail.webp',
-    githubMonorepo: 'https://github.com/odedsam/crypto-dash',
-  },
-
-  {
     title: 'Estatein RealEstate',
     description:
       'Developed a smart real estate platform with property listings, advanced filters, and admin dashboards. Designed for high usability, scalability, and clean architecture. Combines sleek UI with powerful property management tools.',
@@ -52,6 +42,16 @@ export const PROJECTS: Project[] = [
     githubMonorepo: 'https://github.com/odedsam/explore-moon',
   },
   {
+    title: 'Noad',
+    description:
+      'sleek platform for a future-forward techwear company. Includes dynamic product displays, micro-animations, and smooth UX flows. Designed to merge fashion innovation with digital elegance',
+    tech: ['React', 'Zustand', 'Recharts', 'WebSockets'],
+    href: 'https://noad.vercel.app',
+    imageUrl: '/thumb/noad-thumbnail.webp',
+    githubMonorepo: 'https://github.com/odedsam/crypto-dash',
+  },
+
+  {
     title: 'Virtual Library',
     description:
       'Developed an advanced web application for Browse and managing books, leveraging an open-source book API. The app enables users to search, and view detailed information about books, providing a smooth and intuitive user experience.',
@@ -59,6 +59,16 @@ export const PROJECTS: Project[] = [
     href: 'https://virtual-libary-rho.vercel.app/',
     githubMonorepo: 'https://github.com/odedsam/virtual-libary',
     imageUrl: '/thumb/virtual-libary-thumbnail.webp',
+    pinned: true,
+  },
+  {
+    title: 'Market Mate',
+    description:
+      'Developed a sleek and user-friendly basic e-commerce application, integrating the EsculaJS API. The app allows users to seamlessly browse products, search, and view detailed information, delivering a smooth and engaging shopping experience.',
+    tech: ['TypeScript', 'React', 'Vite', 'Zustand', 'Escuelajs API', 'React Query'],
+    href: 'https://marketmate-jet.vercel.app/',
+    githubMonorepo: 'https://github.com/odedsam/marketmate',
+    imageUrl: '/thumb/marketmate-thumb.webp',
     pinned: true,
   },
 
